@@ -3,7 +3,7 @@
   <head>
     <title>Larkins Bar</title>
     <%= csrf_meta_tags %>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Abril+Fatface|Lato|Alex+Brush|Montserrat:400,600', media: 'all' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -13,6 +13,6 @@
   <body>
     <%= render 'layouts/shared/header' %>
     <%= yield %>
+    <%= render 'layouts/shared/footer' %>
   </body>
-  <%= render 'layouts/shared/footer' %>
 </html>
