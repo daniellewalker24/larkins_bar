@@ -20,7 +20,7 @@ body {
     position: relative;
 
     &.hero-image {
-        background-image: image-url('hero-image.png');
+        background-image: image-url('home/hero-image.jpg');
     }
 
     &.another-image {
@@ -29,7 +29,7 @@ body {
 }
 
 .second-image-wrapper {
-    background: image-url('home/home-menu-hero.png') center bottom no-repeat;
+    background: image-url('home/home-menu-hero.jpg') center bottom no-repeat;
     background-size: cover;
     min-height: 600px;
     position: relative;
