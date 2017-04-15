@@ -1,0 +1,301 @@
+.footer-image-wrapper {
+  background: image-url('home/home-events-hero.png') center bottom no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 300px;
+  position: relative;
+  @media screen and (min-width: 768px) {
+      margin-top: $overlap;
+  }
+  @include breakpoint (small only) {
+    background-attachment: scroll;
+
+  }
+}
+
+.footer-content-wrapper {
+  @include customised-flex-grid-row;
+
+  @include breakpoint(medium) {
+    padding-top: rem(100px);
+    padding-left: rem(40px);
+    padding-right: rem(40px);
+  }
+  @include breakpoint(small only) {
+    padding-left: rem(34px);
+    padding-right: rem(34px);
+    padding-top: rem(70px);
+    padding-bottom: rem(30px);
+  }
+}
+
+.footer-content-container {
+  font-family: $lato;
+  color: $white;
+
+  @include breakpoint(medium down) {
+    @include flex-grid-column(12);
+  padding-bottom: rem(40px);
+    &.text-center {
+      text-align: left;
+    }
+  }
+
+  @include breakpoint(large) {
+    @include flex-grid-column(4);
+  }
+}
+
+.footer-content-overview {
+  @include breakpoint(medium) {
+    margin-right: rem(10px);
+  }
+}
+
+.footer-content-serving-times {
+  @include breakpoint(large) {
+    margin-left: rem(40px);
+  }
+}
+
+.footer-content-opening-hours {
+  @include breakpoint(medium) {
+    display: inline-block;
+    text-align: left;
+  }
+}
+
+.footer-title-text {
+  font-family: $abril-fatface;
+  color: $white;
+  text-transform: uppercase;
+  font-size: rem(21px);
+  letter-spacing: rem-calc(3px);
+  padding-bottom: rem(10px);
+}
+
+.footer-overview-info {
+  font-size: rem-calc(16px);
+  margin-bottom: rem(10px);
+  &.carvery-info {
+    padding-top: rem(25px);
+  }
+}
+
+.footer-social-icons {
+  list-style: none;
+  margin: 0;
+
+  li {
+    display: inline-block;
+  }
+}
+
+.social-media-icons {
+  width: 23px;
+  height: 23px;
+  margin-right: rem(11px);
+}
+
+.footer-contact,
+.footer-serving-times {
+  list-style: none;
+  margin: 0;
+}
+
+.footer-contact-item {
+  padding-left: rem(50px);
+
+  &.opening-times {
+    background: image-url('shared/footer/clock-icon.svg');
+    background-repeat: no-repeat;
+    padding-left: rem(50px);
+    background-size: 20px;
+    background-position-y: 5px;
+
+    margin-bottom: rem(10px);
+  }
+
+  &.telephone {
+    background: image-url('shared/footer/telephone-icon.svg');
+    background-repeat: no-repeat;
+    padding-left: rem(50px);
+    background-size: 20px;
+    background-position-y: 5px;
+    margin-bottom: rem(10px);
+  }
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+.footer-opening-times {
+  display: block;
+}
+
+.footer-content-info {
+  padding-right: rem(48px);
+}
+
+.footer-copyright-info-wrapper {
+  @include flex-grid-row;
+}
+
+.footer-copyright-info {
+  @include flex-grid-column(12);
+  color: $white;
+  opacity: 0.5;
+  font-family: $lato;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+&.telephone-icon {
+    background: image-url('home/telephone-icon.svg');
+    background-repeat: no-repeat;
+    padding-left: rem(50px);
+    margin-top: rem(30px);
+}
+
+&.time-icon {
+  background: image-url('home/clock-icon.svg');
+  background-repeat: no-repeat;
+  padding-left: rem(50px);
+  background-size: 6%;
+  background-position-y: rem(5px);
+}
+&.without-icon {
+  line-height: rem(30px);
+  padding-left: rem(50px);
+}
+&.food-icon {
+  background: image-url('home/food-icon.svg');
+  background-repeat: no-repeat;
+  padding-left: rem(50px);
+  background-size: 14%;
+  background-position-y: rem(6px);
+  background-position-x: rem(-5px);
+}
+
+.footer-content-wrapper {
+  @include flex-grid-row;
+  padding: rem-calc(145px) rem-calc(120px) rem-calc(0px);
+  @include breakpoint (small only) {
+    padding: rem(30px);
+  }
+
+}
+
+.footer-content-container {
+  @include flex-grid-column($columns: 4, $gutter: 0);
+  @include breakpoint (medium down) {
+    @include flex-grid-column(12);
+  }
+}
+
+
+.footer-content-info {
+  color: $white;
+  font-family: $lato;
+  padding-right: rem(48px);
+  &.opening-hours {
+   padding-left: rem(49px);
+  }
+  @include breakpoint (small only) {
+    padding: 0;
+  }
+}
+
+
+.footer-title-text {
+  font-family: $abril-fatface;
+  color: $white;
+  text-transform: uppercase;
+  font-size: rem(21px);
+  letter-spacing: rem-calc(3px);
+  padding-bottom: rem(10px);
+  &.opening-hours {
+    @include breakpoint (small only) {
+      padding: 0;
+    }
+  }
+  &.serving-times {
+padding-left: rem(122px);
+  }
+}
+
+.footer-opening-info {
+  margin-left: rem(84px);
+  @include breakpoint (small-only) {
+    margin-left: 0;
+  }
+}
+
+.footer-food-serving-info {
+  margin-left: rem(124px);
+}
+
+
+.footer-block-content-info {
+    color: $white;
+    font-family: $lato;
+    font-size: rem-calc(16px);
+    margin-bottom: rem(10px);
+
+    &.telephone-icon {
+        background: image-url('home/telephone-icon.svg');
+        background-repeat: no-repeat;
+        padding-left: rem(50px);
+        margin-top: rem(30px);
+    }
+
+    &.time-icon {
+      background: image-url('home/clock-icon.svg');
+      background-repeat: no-repeat;
+      padding-left: rem(50px);
+      background-size: 6%;
+      background-position-y: rem(5px);
+    }
+    &.without-icon {
+      line-height: rem(30px);
+      padding-left: rem(50px);
+    }
+    &.food-icon {
+      background: image-url('home/food-icon.svg');
+      background-repeat: no-repeat;
+      padding-left: rem(50px);
+      background-size: 14%;
+      background-position-y: rem(6px);
+      background-position-x: rem(-5px);
+    }
+}
+
+.social-media-icons {
+  width: rem(23px);
+  height: rem(23px);
+  margin-right: rem(11px);
+  cursor: pointer;
+}
+
+.footer-image-wrapper {
+    background: image-url('home/home-events-hero.png') center bottom no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 400px;
+    position: relative;
+    @media screen and (min-width: 768px) {
+        margin-top: $overlap;
+    }
+}
+*/

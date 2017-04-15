@@ -1,0 +1,168 @@
+
+
+.primary-header:after,
+.primary-header:before {
+    content: '';
+    display: table;
+}
+
+.primary-header:after {
+    clear: both;
+}
+
+
+.mobile-menu-icon {
+    float: right;
+    padding-top: rem(24px);
+    padding-right: rem(21px);
+    @include breakpoint (small only) {
+      padding-top: rem(15px);
+    }
+
+    @include breakpoint (medium only) {
+      padding-top: rem(10px);
+    }
+
+}
+
+.primary-navigation-wrap {
+    display: none;
+    clear: both;
+}
+
+
+.primary-navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    @include breakpoint(medium down) {
+      display: block;
+    }
+}
+
+.primary-navigation a {
+    display: block;
+    padding: 10px;
+    color: $golden-yellow;
+    font-family: $lato;
+    text-transform: uppercase;
+    letter-spacing: rem(3px);
+    font-weight: 600;
+    font-size: rem(13px);
+    cursor: pointer;
+
+}
+@media screen and (min-width: 1135px) {
+    .mobile-menu-icon {
+        display: none;
+        float: right;
+    }
+
+    .primary-navigation-wrap {
+        display: block;
+        clear: none;
+        float: right;
+        padding-top: rem(20px);
+    }
+
+    .primary-navigation li {
+        display: inline-block;
+        position: relative;
+    }
+
+    .primary-navigation li:hover .dropdown {
+        display: block;
+    }
+}
+
+.primary-header-wrapper {
+    margin-top: rem(20px);
+        text-align: center;
+}
+
+
+.primary-navigation-social-icons {
+  display: inline-block;
+  list-style: none;
+  margin-left: 0;
+}
+
+.navigation-upper-wrapper {
+  overflow: hidden;
+  border-bottom: 1px solid $golden-yellow;
+  font-family: $lato;
+  font-weight: 600;
+  font-size: rem(13px);
+  letter-spacing: rem(1px);
+  @include breakpoint (small only) {
+
+    text-align: center;
+  }
+}
+
+.nav-upper-telephone {
+  float: right;
+  border-left: 1px solid $golden-yellow;
+  padding-left: rem(35px);
+  padding-right: rem(35px);
+  padding-top: rem(15px);
+  padding-bottom: rem(15px);
+  @include breakpoint (small only) {
+    border-left: 0;
+    text-align: center;
+  }
+  a {
+    color: $golden-yellow;
+  }
+  &.telephone-icon {
+      background: image-url('home/telephone-icon.svg');
+      background-repeat: no-repeat;
+      padding-left: rem(50px);
+      background-size: rem(23px);
+      background-position-y: 50%;
+      background-position-x: 12%;
+  }
+}
+
+.nav-upper-postcode {
+  float: right;
+  border-left: 1px solid $golden-yellow;
+  padding-left: rem(35px);
+  padding-right: rem(35px);
+  color: $golden-yellow;
+  padding-top: rem(15px);
+  padding-bottom: rem(15px);
+
+  &.address-icon {
+      background: image-url('home/map-icon.svg');
+      background-repeat: no-repeat;
+      padding-left: rem(50px);
+      background-size: rem(17px);
+      background-position-y: 50%;
+      background-position-x: 15%;
+  }
+}
+
+.nav-social-media {
+  width: 20px;
+  height: 20px;
+  margin-right: rem(8px);
+}
+
+.logo-wrapper {
+  padding: 10px 0 25px 20px;
+  float: left;
+    width: 300px;
+    @include breakpoint (small only) {
+      width: 200px;
+    }
+  }
+
+  .primary-nav-wrapper {
+    @include breakpoint (small only) {
+    border-top: 1px solid $golden-yellow;
+    clear: both;
+    padding-top: rem(25px);
+  }
+}

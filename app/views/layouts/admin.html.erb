@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Larkins Bar</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans', media: 'all' %>
+    <%= stylesheet_link_tag    'admin', media: 'all' %>
+    <%= stylesheet_link_tag    'admin-navigation', media: 'all' %>
+    <%= javascript_include_tag 'admin' %>
+  </head>
+
+  <body>
+    <%= render 'admin/shared/navigation' if @current_user.present? %>
+
+    <%= yield %>
+  </body>
+</html>

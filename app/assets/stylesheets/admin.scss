@@ -1,0 +1,25 @@
+@import 'vendor/foundation/foundation', 'lib/variables', 'admin/generic';
+
+.error-alert-box {
+    color: red;
+    text-align: center;
+    padding-top: 30px;
+    font-weight: bold;
+}
+
+.edit-icon {
+    a {
+          background: image-url('edit-icon.png');
+        background-repeat: no-repeat;
+        padding-left: 16px;
+        /* width of the image plus a little extra padding */
+        display: block;
+        /* may not need this, but I've found I do */
+    }
+}
+
+.menu-section-button {
+  input {
+    background-color: red;
+  }
+}

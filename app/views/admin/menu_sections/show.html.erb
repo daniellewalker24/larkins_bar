@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @menu_section.area %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @menu_section.content %>
+</p>
+
+<%= link_to 'Edit', edit_menu_section_path(@menu_section) %> |
+<%= link_to 'Back', menu_sections_path %>

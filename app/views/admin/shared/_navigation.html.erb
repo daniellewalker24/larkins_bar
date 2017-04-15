@@ -1,0 +1,37 @@
+<div class="welcome-user-wrapper">
+  <div class="welcome-user-container">
+    <div class="dashboard-wrapper">
+    <div class="dashboard-title">Dashboard</div>
+    <div class="larkins-dashboard-title"> Larkin's Bar & Restaurant </div>
+  </div>
+  <div class="user-welcome-text-wrapper">
+  <div class="user-icon">
+        <%= @current_user.username[0]%>
+      </div>
+<div class="welcome-user-message">
+    Welcome,
+    <%= @current_user.username %>
+  </div>
+</div>
+
+    <%= link_to 'Edit', edit_admin_user_path(@current_user) %>
+  </div>
+  <div class="log-out-container">
+    <%= link_to 'Log out', destroy_admin_sessions_path %>
+  </div>
+</div>
+
+<div class="navigation-wrapper">
+  <div class="navigation-container">
+    <% unless current_page?(admin_users_path) %>
+    <%= link_to 'Add Users', admin_users_path, class:'add-users' %>
+    <% end %>
+    <%= link_to 'View Site', root_url, target: '_blank', class:'view-site' %>
+    <% unless current_page?(admin_menu_sections_path) %>
+    <%= link_to 'Edit Menu', admin_menu_sections_path, class:'edit-icon' %>
+    <% end %>
+      <%= link_to 'Instructions', admin_user_instructions_path, class:'edit-icon' %>
+      <%= link_to 'New Menu Section', new_admin_menu_section_path %>
+
+  </div>
+</div>

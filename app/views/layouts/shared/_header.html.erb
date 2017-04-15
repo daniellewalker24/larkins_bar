@@ -1,0 +1,85 @@
+<!--<%= link_to 'book a table', 'https://www.facebook.com/LarkinsBar/', class: 'booking-hero-side-button' %>
+<%= link_to '', 'https://www.facebook.com/LarkinsBar/', class: 'facebook-hero-side-button', target: '_blank', rel: 'noopener' %> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+
+<!--<div class="slide-down">What a deal!</div>
+<span class="click-me">Grab This Deal</span> -->
+<div class="navigation-upper-wrapper">
+  <div class="nav-upper-postcode address-icon">
+    HU5 3AE
+  </div>
+  <div class="nav-upper-telephone telephone-icon">
+    <%= link_to '01482 440991', 'tel:01482440991' %>
+  </div>
+</div>
+
+<header class="primary-header">
+  <div class="primary-header-wrapper">
+    <div class="logo-wrapper">
+      <%= link_to (image_tag 'shared/header/larkins-logo.svg', alt: 'Larkins Logo', width: 300, height: 70), root_url %>
+
+    </div>
+    <%= link_to (image_tag 'menu-icon.png', alt: 'Menu'), '#navigation', class:'slide-toggle mobile-menu-icon', data: { container: '.primary-navigation-wrap', return: false } %>
+<div class="primary-nav-wrapper">
+    <nav class="primary-navigation-wrap">
+
+      <ul class="primary-navigation">
+
+        <li>
+          <%= link_to 'Home', root_url, title: 'Home' %>
+        </li>
+
+        <li>
+          <%= link_to 'About', '#' , title: 'About' %>
+        </li>
+        <li>
+          <%= link_to 'Beers', '#' , title: 'Beers' %>
+        </li>
+        <li>
+          <%= link_to 'Booking', '#' , title: 'Booking' %>
+        </li>
+        <li>
+          <%= link_to 'Menu', '#' , title: 'Menu' %>
+        </li>
+        <li>
+          <%= link_to 'Whats on', '#' , title: 'Whats on' %>
+        </li>
+        <li>
+          <%= link_to 'Contact', '#' , title: 'Contact' %>
+        </li>
+      </ul>
+      <ul class="primary-navigation-social-icons">
+        <li>
+          <%= link_to (image_tag 'shared/header/facebook-icon.svg', class: 'nav-social-media', alt: 'Facebook'), 'https://www.facebook.com/LarkinsBar/' %>
+          <%= link_to (image_tag 'shared/header/twitter-icon.svg', class: 'nav-social-media', alt: 'Twitter'), 'https://twitter.com/larkinsbar' %>
+          <%= link_to (image_tag 'shared/header/tripadvisor-icon.svg', class: 'nav-social-media', alt: 'Tripadvisor'),
+          'https://www.tripadvisor.co.uk/Restaurant_Review-g186317-d2264451-Reviews-Larkin_s_Bar-Kingston_upon_Hull_East_Riding_of_Yorkshire_England.html' %>
+          <%= link_to (image_tag 'shared/header/instagram-icon.svg', class: 'nav-social-media', alt: 'Instagram'), 'https://www.instagram.com/larkins_bar_hull/' %>
+
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+</header>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+  /*
+ * Example usage:
+ * <a href="#div-to-go-to" data-container="#id" data-return="false">Toggle .hidden on #id and stop</a>
+ *
+ * Alternatively:
+ * <a href="#div-to-go-to" data-container=".links" data-return="true">Toggle .hidden on .links and scroll to #div-to-go-to</a>
+ */
+  $(document).on("click", ".slide-toggle", function (e) {
+    var toggleContainer = $(this).attr('data-container');
+    var dataReturn = $(this).attr('data-return');
+
+    $(toggleContainer).slideToggle();
+
+    if (dataReturn === 'false') {
+      e.preventDefault();
+    }
+  });
+</script>

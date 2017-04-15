@@ -1,0 +1,526 @@
+body {
+    background: image-url('bg-texture.png');
+}
+
+.hero-image-container {
+    @include flex-grid-row;
+    text-align: center;
+    max-width: none;
+}
+
+.hero-image-content {
+    @include flex-grid-column(12);
+}
+
+.hero-image-wrapper {
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 600px;
+    position: relative;
+
+    &.hero-image {
+        background-image: image-url('home/home-new.png');
+    }
+
+    &.another-image {
+        background-image: url('http://placehold.it/1920x800');
+    }
+}
+
+.second-image-wrapper {
+    background: image-url('home/home-menu-hero.png') center bottom no-repeat;
+    background-size: cover;
+    min-height: 600px;
+    position: relative;
+    @media screen and (min-width: 768px) {
+        margin-top: $overlap;
+    }
+    @include breakpoint(small only) {
+        display: none;
+    }
+
+    @include breakpoint(1025px) {
+      background-attachment: fixed;
+    }
+}
+
+.hero-tagline {
+    color: white;
+    font-family: $lato;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: calc(50% - 50px);
+    @include breakpoint (small only) {
+      top: calc(85% - 50%);
+    }
+}
+
+.decorated-text {
+    color: $golden-yellow;
+    font-family: $alex-brush;
+    font-size: rem(65px);
+    line-height: 0.8;
+    text-transform: lowercase;
+    font-weight: 500;
+    letter-spacing: normal;
+    @include breakpoint (small only) {
+      font-size: rem(60px);
+    }
+}
+
+.hero-standard-text {
+    font-family: $montserrat;
+    text-transform: uppercase;
+    font-size: rem(30px);
+    font-weight: 600;
+    letter-spacing: rem(5px);
+    padding-left: rem(13px);
+    @include breakpoint (medium only) {
+      font-size: rem(39px);
+    }
+    @include breakpoint (small only) {
+      font-size: rem(27px);
+      width: rem(300px);
+      font-weight: 600;
+      font-family: $montserrat;
+      letter-spacing: rem(2px);
+    }
+}
+
+.hero-content {
+    margin-top: $overlap;
+}
+
+.menu-home-content {
+    margin-top: $overlap;
+    @include breakpoint (small only) {
+        padding-top: rem(40px);
+    }
+    @include breakpoint (medium) {
+      padding-top: rem(60px);
+      padding-bottom: rem(40px);
+    }
+}
+
+.main-content-blocks {
+    @include customised-flex-grid-row;
+    background: image-url('home/overlay.png') left top repeat, $teal-blue;
+    position: relative;
+    z-index: 2;
+    @include breakpoint(medium only) {
+        width: 95%;
+    }
+}
+
+.content-block {
+    @include content-block-background( 'home/graphic-underlay-1.png', 100%, 67%);
+    padding: rem-calc(70px) rem-calc(45px) rem-calc(50px);
+    @include breakpoint(small only) {
+         @include flex-grid-column($columns: 12, $gutter: 0);
+    }
+    @include breakpoint(medium) {
+         @include flex-grid-column($columns: 6, $gutter: 0);
+    }
+}
+
+.booking-content-block {
+    @include flex-grid-column($columns: 6, $gutter: 0);
+    @include content-block-background( 'home/graphic-underlay-3.png', 100%, 67%);
+    padding: rem-calc(60px) rem-calc(45px) rem-calc(25px);
+    @include breakpoint(small only) {
+         @include flex-grid-column($columns: 12, $gutter: 0);
+    }
+}
+
+.image-content-block {
+    @include breakpoint(small only) {
+         @include flex-grid-column($columns: 12, $gutter: 0);
+    }
+    @include breakpoint(medium) {
+         @include flex-grid-column($columns: 6, $gutter: 0);
+    }
+    @include breakpoint(medium only) {
+        &.discovery-home {
+            background: image-url('home/home.png') no-repeat;
+            background-size: auto 100%;
+
+            img {
+                display: none;
+            }
+        }
+
+        &.home-booking {
+            background: image-url('home/home-booking-image.png') no-repeat;
+            background-size: auto 100%;
+
+            img {
+                display: none;
+            }
+        }
+    }
+    background-size: cover;
+}
+
+.content-block-sub-title {
+    color: $golden-yellow;
+    line-height: 0.3;
+    font-family: $alex-brush;
+    font-size: rem-calc(50px);
+}
+
+.content-block-title {
+    color: $white;
+    font-family: $abril-fatface;
+    text-transform: uppercase;
+    font-size: rem-calc(30px);
+    letter-spacing: rem-calc(5px);
+}
+
+.block-content-intro {
+    color: $white;
+    font-family: $lato;
+    font-weight: 700;
+    font-size: rem-calc(16px);
+}
+
+.block-content-info {
+    color: $white;
+    font-family: $lato;
+    font-size: rem-calc(16px);
+    margin-bottom: rem(10px);
+
+    &.telephone-icon {
+        background: image-url('home/telephone-icon.svg');
+        background-repeat: no-repeat;
+        padding-left: rem(50px);
+    }
+
+    &.address-icon {
+        background: image-url('home/map-icon.svg');
+        background-repeat: no-repeat;
+        padding-left: rem(50px);
+        background-size: 25px;
+        background-position-y: 23%;
+    }
+
+    &.time-icon {
+      background: image-url('home/clock-icon.svg');
+      background-repeat: no-repeat;
+      padding-left: rem(50px);
+      background-size: 20px;
+      background-position-y: rem(2px);
+    }
+    &.food-icon {
+      background: image-url('home/food-icon.svg');
+      background-repeat: no-repeat;
+      padding-left: rem(50px);
+      background-size: 20px;
+      background-position-y: rem(2px);
+    }
+
+    &.without-icon {
+      padding-left: rem(50px);
+      line-height: rem(17px);
+    }
+    a {
+      text-decoration: none;
+      color: $white;
+    }
+}
+
+.larger-content-block {
+    @include breakpoint(small only) {
+         @include flex-grid-column($columns: 12, $gutter: 0);
+        order: 1;
+    }
+    @include breakpoint(medium) {
+         @include flex-grid-column($columns: 7, $gutter: 0);
+    }
+    @include breakpoint(medium only) {
+        &.home-beer {
+            background: image-url('home/home-beers-image.png') no-repeat;
+            background-size: auto 100%;
+
+            img {
+                display: none;
+            }
+        }
+    }
+    background-size: cover;
+}
+
+.beer-larger-image-content-block {
+    @include breakpoint(medium) {
+         @include flex-grid-column($columns: 5, $gutter: 0);
+    }
+    @include content-block-background( 'home/graphic-underlay-2.png', 100%, 67%);
+    //background: image-url('home/graphic-underlay-1.png') center bottom no-repeat, $teal-blue;
+    padding-left: rem-calc(45px);
+    padding-right: rem-calc(45px);
+    padding-top: rem-calc(60px);
+}
+
+.call-to-action-btn {
+    @include primary-submit-button;
+    @include breakpoint (small only) {
+      margin-bottom: rem(25px);
+    }
+}
+
+.secondary-submit-button{
+    @include secondary-submit-button;
+    @include breakpoint (small only) {
+      margin-bottom: rem(25px);
+    }
+}
+
+.call-to-action-buttons {
+    margin-top: rem(20px);
+
+    .beer-button {
+        padding: rem(0);
+    }
+}
+
+.dine-title {
+    color: $golden-yellow;
+    font-family: $alex-brush;
+    font-size: rem-calc(42px);
+    @include breakpoint(small only) {
+        line-height: rem(33px);
+    }
+}
+
+.larkins-menu-title {
+    font-family: $montserrat;
+    color: $white;
+    text-transform: uppercase;
+    font-size: rem-calc(34px);
+    letter-spacing: 5px;
+    line-height: rem-calc(2px);
+    font-weight: 600;
+    @include breakpoint(small only) {
+        line-height: rem(40px);
+    }
+}
+
+.slide-down {
+    background: red;
+    display: none;
+}
+
+.click-me {
+    cursor: pointer;
+}
+
+.facebook-hero-side-button {
+    display: none;
+    background: image-url('home/facebook-icon.png') center no-repeat;
+    background-color: $teal-blue;
+    z-index: 1;
+    position: fixed;
+    right: -1%;
+    top: 53%;
+    border: 1px solid $periwinkle-blue;
+    padding: rem(25px 40px);
+    @include breakpoint(large) {
+        display: inline-block;
+    }
+}
+
+.booking-hero-side-button {
+    display: none;
+    background-color: $teal-blue;
+    border: 1px solid $periwinkle-blue;
+    z-index: 1;
+    position: fixed;
+    transform: rotate(90deg);
+    transform-origin: right 10%;
+    float: right;
+    right: 0;
+    top: 50%;
+    padding: rem(25px);
+    text-transform: uppercase;
+    font-family: $montserrat;
+    color: $white;
+    @include breakpoint(large) {
+        display: inline-block;
+    }
+}
+
+.menu-content-block {
+    @include flex-grid-column($columns: 4, $gutter: 0);
+    @include content-block-background( 'home/graphic-underlay-1.png', 100%, 67%);
+    padding: rem-calc(50px) rem-calc(20px) rem-calc(0px);
+}
+
+.home-menu-title {
+    color: $white;
+    font-family: $abril-fatface;
+    text-transform: uppercase;
+    font-size: rem(30px);
+    letter-spacing: rem(4px);
+}
+
+.menu-item-container {
+    &.gluten-free .menu-item-title {
+        background: image-url('gluten-free-icon.svg') no-repeat center right;
+        padding-right: 30px;
+    }
+
+    &.vegetarian .menu-item-title {
+        background: image-url('vegeterian-icon.svg') no-repeat center right;
+        padding-right: 30px;
+    }
+
+    &.gluten-free.vegetarian .menu-item-title {
+        background: image-url('gluten-free-icon.svg') no-repeat center right, image-url('vegeterian-icon.svg') no-repeat center right 28px;
+        padding-right: 64px;
+    }
+}
+
+.full-menu-content-block {
+    @include flex-grid-column($columns: 4, $gutter: 0);
+    padding: rem-calc(0) rem-calc(40px) rem-calc(30px);
+    @include breakpoint(medium down) {
+         @include flex-grid-column($columns: 12, $gutter: 0);
+    }
+}
+
+.button-container-wrapper {
+    margin: 0 auto;
+    padding-bottom: rem(40px);
+}
+
+.events-content-block {
+    @include flex-grid-column($columns: 6, $gutter: 0);
+    @include breakpoint (small only) {
+         @include flex-grid-column(12);
+    }
+}
+
+.whats-on-content {
+    color: $white;
+    line-height: rem(30px);
+}
+
+.events-title-wrapper {
+    @include flex-grid-row;
+}
+
+.event-content-container {
+    @include flex-grid-column($columns: 12, $gutter: (small: 0));
+}
+
+.event-content-wrapper {
+    @include flex-grid-row;
+    padding-bottom: rem(100px);
+}
+
+.text-content-alignment {
+    @include breakpoint(large) {
+        padding: rem-calc(160px) rem-calc(40px) rem-calc(0px);
+    }
+    @include breakpoint(medium down) {
+        padding-top: rem(130px);
+        padding-left: rem(25px);
+        padding-right: rem(25px);
+    }
+}
+
+.event-content-padding {
+    @include breakpoint(medium up) {
+        padding-left: rem(40px);
+    }
+}
+
+.third-image-wrapper {
+
+    background: image-url('home/home-events-hero.png') center bottom no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+        margin-top: $overlap;
+    }
+    @include breakpoint (small only) {
+      background-attachment: scroll;
+    }
+}
+
+.contact-content-block {
+    @include full-menu-content-block;
+    padding: rem-calc(50px) rem-calc(40px) rem-calc(0px);
+    @include breakpoint(medium) {
+         @include flex-grid-column($columns: 6, $gutter: 0);
+    }
+}
+
+.opening-times-title {
+    font-family: $abril-fatface;
+    color: $white;
+    text-transform: uppercase;
+    font-size: rem(21px);
+    letter-spacing: rem-calc(3px);
+    padding-bottom: rem(10px);
+}
+
+.disabled-info {
+    padding-bottom: rem(40px);
+    line-height: rem(30px);
+}
+
+.hero-button-wrapper {
+    bottom: 225px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    @include breakpoint (medium only) {
+    bottom: 172px;
+    }
+    @include breakpoint (small only) {
+      position: relative;
+      text-align: center;
+      bottom: -320px;
+    }
+}
+
+.beer-content-wrapper {
+    padding-bottom: rem(40px);
+}
+
+.menu-wrapper {
+    @include breakpoint(small only) {
+        padding-top: rem(50px);
+    }
+}
+
+.events-titles-wrapper {
+    @include breakpoint(small only) {
+        padding-left: rem(10px);
+    }
+}
+
+.main-content-transparent-blocks {
+    @include customised-flex-grid-row;
+    position: relative;
+    z-index: 2;
+    @include breakpoint(medium only) {
+        width: 95%;
+    }
+}
+
+.home-menu-button-wrapper {
+    @include flex-grid-column(12);
+    text-align: center;
+    padding-bottom: rem(20px);
+}
+
+.contact-block-wrapper {
+    list-style: none;
+    margin-left: 0;
+}

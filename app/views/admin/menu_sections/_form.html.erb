@@ -1,0 +1,37 @@
+<%= form_for menu_section, url: (menu_section.new_record? ? admin_menu_sections_path : admin_menu_section_path) do |f| %>
+  <% if menu_section.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(menu_section.errors.count, "error") %> prohibited this menu_section from being saved:</h2>
+
+      <ul>
+      <% menu_section.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% if menu_section.new_record? %>
+    <div class="field">
+      <%= f.label :area %>
+      <%#= f.text_field :area %>
+      <%= f.select :area, MenuSection::AREAS, prompt: 'Please select' %>
+    </div>
+  <% else %>
+    <h2><%= menu_section.area %></h2>
+    <p>You are editing the <strong><%= menu_section.area %></strong>.</p>
+  <% end %>
+  <div class="field">
+    <%= f.label :category %>
+    <%#= f.text_field :area %>
+    <%= f.select :category, MenuSection::CATEGORY, prompt: 'Please select' %>
+  </div>
+  <div class="field">
+    <%= f.label :content %>
+    <%= f.text_area :content, class: 'editor' %>
+  </div>
+
+  <div class="menu-section-button">
+    <%= f.submit %>
+  </div>
+<% end %>

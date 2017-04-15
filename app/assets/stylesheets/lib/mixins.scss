@@ -1,0 +1,62 @@
+@function rem($value) {
+  @return rem-calc($value);
+}
+
+@mixin primary-submit-button {
+  background-color: $golden-yellow;
+  border: 0;
+  color: $white;
+  letter-spacing: 2px;
+  outline: 0;
+  display:inline-block;
+  font-size: rem-calc(12px);
+  font-family: $montserrat;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 15px 30px 15px 30px;
+  &:hover {
+    background-color: $dark-golden-yellow;
+    color: $white;
+  }
+}
+
+@mixin secondary-submit-button {
+  background-color: $white;
+  border: 0;
+  color: $golden-yellow;
+  letter-spacing: 2px;
+  outline: 0;
+  display:inline-block;
+  font-size: rem-calc(12px);
+  font-family: $montserrat;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 15px 30px 15px 30px;
+  &:hover {
+    background-color: $ghost-grey;
+    color: $golden-yellow;
+  }
+}
+
+
+@mixin customised-flex-grid-row {
+  @include flex-grid-row;
+  max-width: rem(1056px);
+
+  @include breakpoint(1400px) {
+    //max-width: rem(1645px);
+    max-width: 75rem;
+  }
+}
+
+@mixin content-block-background($graphic, $x, $y) {
+  background: image-url($graphic) $x $y no-repeat,
+              image-url('home/overlay.png') left top repeat,
+              $teal-blue;
+}
+
+
+@mixin full-menu-content-block {
+              background: image-url('home/overlay.png') left top repeat,
+              $teal-blue;
+}

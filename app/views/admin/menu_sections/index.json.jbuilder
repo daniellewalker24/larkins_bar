@@ -1,0 +1,1 @@
+json.array! @menu_sections, partial: 'menu_sections/menu_section', as: :menu_section

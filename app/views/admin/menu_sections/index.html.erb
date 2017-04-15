@@ -1,0 +1,19 @@
+ <p id="notice"><%= notice %></p>
+
+<h1>Menu Sections</h1>
+
+
+
+<% @menu_sections.each do |category, menu_sections| %>
+  <div class="admin-menu-sections <%= category.parameterize %>">
+
+    <h2><%= category %></h2>
+
+    <% menu_sections.each do |menu_section| %>
+      <%= menu_section.area %>
+      <%= link_to 'View', menu_sections_path(anchor: "menu-#{menu_section.id}") %>
+      <%= link_to 'Edit', edit_admin_menu_section_path(menu_section) %>
+      <%= link_to 'Delete', admin_menu_section_path(menu_section), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+  </div>
+<% end %>

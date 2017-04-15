@@ -1,0 +1,106 @@
+@import 'vendor/foundation/foundation', 'lib/variables', 'admin/generic';
+.navigation-wrapper {
+  @include flex-grid-row;
+  max-width: none;
+
+
+  a {
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+
+    &:hover {
+      color: red;
+    }
+  }
+
+}
+
+.navigation-container {
+  @include flex-grid-column(12);
+  background: $ghost-grey;
+  text-align: center;
+  padding: 20px;
+
+}
+
+.view-site {
+  background: image-url('view-site-icon.png');
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-left: 16px; /* Or size of icon + spacing */
+}
+
+.add-users {
+  background: image-url('add-user-icon.png');
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-left: 16px; /* Or size of icon + spacing */
+}
+
+.edit-icon {
+  background: image-url('edit-icon.png');
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-left: 16px; /* Or size of icon + spacing */
+}
+
+.welcome-user-wrapper {
+  @include flex-grid-row;
+  max-width: none;
+  background-image: linear-gradient(to right, $cinderella-blue 0%, $neon-blue 100%);
+}
+
+.welcome-user-container {
+  @include flex-grid-column(6);
+  padding: 20px;
+  color: white;
+}
+
+.log-out-container {
+  @include flex-grid-column(6);
+  padding: 20px;
+  text-align: right;
+  a {
+    background-color: white;
+    color: black;
+    padding: 15px 24px 18px 23px;
+    &:hover {
+
+      color: black;
+    }
+  }
+
+}
+
+.dashboard-title {
+  color: #3b3f74;
+  font-size: 41px;
+}
+
+.larkins-dashboard-title {
+  color: white;
+  line-height: 0.2;
+  padding-bottom: 20px;
+}
+
+.user-icon {
+background: red;
+border-radius: 70%;
+width: 20px;
+height: 20px;
+line-height: 20px;
+width: 40px;
+padding-top: 10px;
+height: 40px;
+text-align: center;
+text-transform: uppercase;
+display: inline-block;
+
+}
+
+.welcome-user-message {
+  padding-left: 5px;
+  display: inline;
+}

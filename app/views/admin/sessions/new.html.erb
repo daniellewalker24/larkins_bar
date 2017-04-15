@@ -1,0 +1,25 @@
+<div class="error-alert-box">
+  <%= flash[:notice] if flash[:notice] %>
+</div>
+
+<p class="admin-login-information">
+  Please enter your username and password below to log in.
+</p>
+
+<%= form_tag admin_sessions_path do %>
+<div class="form-wrapper">
+  <div class="field">
+    <%= label_tag :username %>
+    <%= text_field_tag :username %>
+  </div>
+
+  <div class="field">
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+  </div>
+
+  <div class="button-container">
+    <%= submit_tag 'Log in', class:'button success' %>
+  </div>
+</div>
+<% end %>

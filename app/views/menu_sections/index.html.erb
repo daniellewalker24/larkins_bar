@@ -1,0 +1,23 @@
+<h1>Larkins Favourites</h1>
+
+<%= raw @larkins_favourites.content %>
+
+<!--<% if @lunch_menu.content.present?  %>
+  <div id="menu-<%#= @lunch_menu.id %>">
+    <%#= raw @lunch_menu.content %>
+  </div>
+<% else %>
+  Content is waiting to be added
+<% end %> -->
+
+
+<%= raw @sharing_platters.content %>
+
+<div id="menu-<%= @craft_beers.id %>">
+  <%= raw @craft_beers.content %>
+</div>
+
+<div id="menu-<%= @lunch_menu.id %>">
+  <h1>Lunch menu</h1>
+  <%= raw @lunch_menu.content %>
+</div>
