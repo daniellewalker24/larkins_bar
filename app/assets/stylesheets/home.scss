@@ -20,7 +20,7 @@ body {
     position: relative;
 
     &.hero-image {
-        background-image: image-url('home/home-new.png');
+        background-image: image-url('hero-image.png');
     }
 
     &.another-image {
@@ -441,14 +441,14 @@ body {
 
     background: image-url('home/home-events-hero.png') center bottom no-repeat;
     background-size: cover;
-    background-attachment: fixed;
     position: relative;
 
     @media screen and (min-width: 768px) {
         margin-top: $overlap;
     }
-    @include breakpoint (small only) {
-      background-attachment: scroll;
+
+    @include breakpoint(1025px) {
+      background-attachment: fixed;
     }
 }
 
