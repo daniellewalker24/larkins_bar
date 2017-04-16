@@ -26,6 +26,11 @@ body {
     &.another-image {
         background-image: url('http://placehold.it/1920x800');
     }
+
+    .call-to-action-btn,
+    .secondary-submit-button {
+      width: 160px;
+    }
 }
 
 .second-image-wrapper {
@@ -274,7 +279,6 @@ body {
     @include breakpoint (small only) {
       margin-bottom: rem(25px);
       text-align: center;
-    width: 160px;
     }
 }
 
