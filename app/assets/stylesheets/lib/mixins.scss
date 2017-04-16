@@ -13,7 +13,13 @@
   font-family: $montserrat;
   font-weight: 600;
   text-transform: uppercase;
-  padding: 15px 30px 15px 30px;
+
+  padding: rem(15px 30px 15px 30px);
+
+  @include breakpoint(medium only) {
+    padding: rem(15px 20px);
+  }
+
   &:hover {
     background-color: $dark-golden-yellow;
     color: $white;

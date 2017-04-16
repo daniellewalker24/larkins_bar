@@ -15,4 +15,3 @@
 //= require turbolinks
 //= require smooth-scroll
 //= require slide-toggle
-//= require vendor/hamburger

@@ -80,6 +80,7 @@ body {
     padding-left: rem(13px);
     @include breakpoint (medium only) {
       font-size: rem(39px);
+      width: 100%;
     }
     @include breakpoint (small only) {
       font-size: rem(27px);
@@ -123,6 +124,7 @@ body {
     }
     @include breakpoint(medium) {
          @include flex-grid-column($columns: 6, $gutter: 0);
+         padding-bottom: rem(30px);
     }
 }
 
@@ -258,6 +260,10 @@ body {
     }
     @include content-block-background( 'home/graphic-underlay-2.png', 100%, 67%);
     //background: image-url('home/graphic-underlay-1.png') center bottom no-repeat, $teal-blue;
+    @include breakpoint(medium only) {
+      padding-left: rem-calc(35px);
+      padding-right: rem-calc(35px);
+    }
     padding-left: rem-calc(45px);
     padding-right: rem-calc(45px);
     padding-top: rem-calc(60px);
@@ -306,6 +312,9 @@ body {
     font-weight: 600;
     @include breakpoint(small only) {
         line-height: rem(40px);
+    }
+    @include breakpoint(medium only) {
+      line-height: 1.1;
     }
 }
 
@@ -457,6 +466,9 @@ body {
 .contact-content-block {
     @include full-menu-content-block;
     padding: rem-calc(50px) rem-calc(40px) rem-calc(0px);
+    @include breakpoint(small only) {
+      @include flex-grid-column($columns: 12, $gutter: 0);
+    }
     @include breakpoint(medium) {
          @include flex-grid-column($columns: 6, $gutter: 0);
     }
@@ -487,11 +499,14 @@ body {
 
     @include breakpoint (small only) {
       bottom: 112px;
+      text-align: center;
     }
 }
 
 .beer-content-wrapper {
+  @include breakpoint(1025px) {
     padding-bottom: rem(40px);
+  }
 }
 
 .menu-wrapper {
@@ -524,4 +539,14 @@ body {
 .contact-block-wrapper {
     list-style: none;
     margin-left: 0;
+}
+
+#map {
+  height: 100%;
+  @include breakpoint(small only) {
+    min-height: 330px;
+  }
+  @include breakpoint(medium) {
+    height: calc(100% - 50px);
+  }
 }

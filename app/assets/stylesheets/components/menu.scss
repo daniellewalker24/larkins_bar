@@ -1,7 +1,7 @@
 @import 'vendor/foundation/foundation',
 'lib/variables',
-'lib/mixins'
-;
+'lib/mixins',
+'vendor/hamburgers';
 
 body {
   background-color: $teal-blue;

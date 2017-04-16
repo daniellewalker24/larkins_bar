@@ -81,6 +81,10 @@
 .primary-header-wrapper {
     margin-top: rem(20px);
         text-align: center;
+
+        @include breakpoint(small only) {
+          text-align: right;
+        }
 }
 
 
@@ -110,10 +114,14 @@
   padding-right: rem(35px);
   padding-top: rem(15px);
   padding-bottom: rem(15px);
+
   @include breakpoint (small only) {
     border-left: 0;
+    border-right: 1px solid $golden-yellow;
     text-align: center;
+    width: 50%;
   }
+
   a {
     color: $golden-yellow;
   }
@@ -135,6 +143,15 @@
   color: $golden-yellow;
   padding-top: rem(15px);
   padding-bottom: rem(15px);
+
+  @include breakpoint(small only) {
+    border-left: 0;
+    width: 50%;
+  }
+
+  @media screen and (max-width: 402px) {
+    margin-top: rem(10px);
+  }
 
   &.address-icon {
       background: image-url('home/map-icon.svg');
@@ -166,5 +183,19 @@
     border-top: 1px solid $golden-yellow;
     clear: both;
     padding-top: rem(25px);
+    text-align: center;
+  }
+}
+
+.hamburger {
+  float: right;
+  display: inline-block;
+
+  @media screen and (min-width: 1135px) {
+    display: none;
+  }
+
+  &:focus {
+    outline: 0;
   }
 }

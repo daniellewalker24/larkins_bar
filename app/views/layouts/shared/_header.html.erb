@@ -19,7 +19,12 @@
       <%= link_to (image_tag 'shared/header/larkins-logo.svg', alt: 'Larkins Logo', width: 300, height: 70), root_url %>
 
     </div>
-    <%= link_to (image_tag 'shared/header/menu-icon.svg', alt: 'Menu'), '#navigation', class:'slide-toggle mobile-menu-icon', data: { container: '.primary-navigation-wrap', return: false } %>
+    <button class="hamburger hamburger--squeeze js-hamburger slide-toggle" type="button" data-container=".primary-navigation-wrap">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+
 <div class="primary-nav-wrapper">
     <nav class="primary-navigation-wrap">
 
@@ -62,24 +67,3 @@
   </div>
 </div>
 </header>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script>
-  /*
- * Example usage:
- * <a href="#div-to-go-to" data-container="#id" data-return="false">Toggle .hidden on #id and stop</a>
- *
- * Alternatively:
- * <a href="#div-to-go-to" data-container=".links" data-return="true">Toggle .hidden on .links and scroll to #div-to-go-to</a>
- */
-  $(document).on("click", ".slide-toggle", function (e) {
-    var toggleContainer = $(this).attr('data-container');
-    var dataReturn = $(this).attr('data-return');
-
-    $(toggleContainer).slideToggle();
-
-    if (dataReturn === 'false') {
-      e.preventDefault();
-    }
-  });
-</script>

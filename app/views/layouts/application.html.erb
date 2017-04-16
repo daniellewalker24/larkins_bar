@@ -11,11 +11,33 @@
     <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Abril+Fatface|Lato|Alex+Brush|Montserrat:400,600', media: 'all' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script>
+      /*
+     * Example usage:
+     * <a href="#div-to-go-to" data-container="#id" data-return="false">Toggle .hidden on #id and stop</a>
+     *
+     * Alternatively:
+     * <a href="#div-to-go-to" data-container=".links" data-return="true">Toggle .hidden on .links and scroll to #div-to-go-to</a>
+     */
+      $(document).on("click", ".slide-toggle", function (e) {
+        var toggleContainer = $(this).attr('data-container');
+        var dataReturn = $(this).attr('data-return');
+
+        $(toggleContainer).slideToggle();
+        $(this).toggleClass('is-active');
+
+        if (dataReturn === 'false') {
+          e.preventDefault();
+        }
+      });
+    </script>
+    <%= yield :head %>
   </head>
 
   <body>
     <%= render 'layouts/shared/header' %>
     <%= yield %>
     <%= render 'layouts/shared/footer' %>
+    <%= yield :footer %>
   </body>
 </html>
