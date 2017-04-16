@@ -15,6 +15,8 @@
     float: right;
     padding-top: rem(24px);
     padding-right: rem(21px);
+    width: 40px;
+    height: 40px;
     @include breakpoint (small only) {
       padding-top: rem(15px);
     }

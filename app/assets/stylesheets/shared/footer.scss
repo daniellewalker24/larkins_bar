@@ -31,7 +31,7 @@
   font-family: $lato;
   color: $white;
 
-  @include breakpoint(medium down) {
+  @include breakpoint(medium only) {
     @include flex-grid-column(4);
   padding-bottom: rem(40px);
     &.text-center {
@@ -41,6 +41,9 @@
 
   @include breakpoint(large) {
     @include flex-grid-column(4);
+  }
+  @include breakpoint(small only) {
+    @include flex-grid-column(12);
   }
 }
 
