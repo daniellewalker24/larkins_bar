@@ -1,107 +1,52 @@
+<%= render partial: 'layouts/shared/hero', locals: { text: '<h1 class="hero-tagline hero-standard-text"> grab a <span class="decorated-text">drink</span> at</br> larkins bar & restaurant </h1>', button_text_1: 'View Menu', button_link_1:
+'http://www.google.com', button_text_2: 'Book Table', button_link_2: 'http://www.google.com', additional_classes: 'hero-image' } %>
+<div></div>
 
-
-<%= render partial: 'layouts/shared/hero', locals: { text: '<h1 class="hero-tagline hero-standard-text"> <span class="decorated-text">taste</span> our hearty menu<br /> and <span class="decorated-text">drink</span> our craft beers </h1>',
-button_text_1: 'View Menu', button_link_1: 'http://www.google.com', button_text_2: 'Book Table', button_link_2: 'http://www.google.com', additional_classes: 'hero-image' } %>
-
-<div class="main-content-blocks hero-content">
-  <div class="content-block">
-    <div class="content-block-sub-title">
-      discover
-    </div>
-    <h2 class="content-block-title">
-      our story
-    </h2>
-    <p class="block-content-intro">Larkin’s Bar opened late August 2010 and has since been part of the thriving location of Newland Avenue.</p>
-    <p class="block-content-info">
-      You’ll find Larkin’s Bar, just around the corner from the ever-bustling edifice that is Princes Avenue.
-    </p>
-    <p class="block-content-info">We have a wide range of craft beers on offer from a multitude of different breweries across the world. If you’re looking to try something new, or just after that unique and exotic choice, Larkin’s Bar is your first stop.</p>
-  </div>
-  <div class="image-content-block discovery-home">
-    <%= link_to (image_tag 'home/home.png', alt: 'Larkins Bar') %>
-  </div>
-</div>
-<div class="main-content-blocks">
-  <div class="larger-content-block home-beer">
-    <%= link_to (image_tag 'home/home-beers-image.png', alt: 'Larkins Beers') %>
-  </div>
-  <div class="beer-larger-image-content-block">
-    <div class="beer-content-wrapper">
-      <div class="content-block-sub-title">
-        taste
+<div class="main-content-blocks menu-beer-content">
+  <div class="beer-full-menu-content-block">
+    <div class="beer-menu-title-wrapper">
+      <div class="beer-opacity-title">
+        Our Beers
       </div>
-      <h2 class="content-block-title">
-        our beers
+      <div class="content-block-sub-title beers-title">
+        discover
+      </div>
+      <h2 class="content-block-title beers-title">
+        Larkin's Favourites
       </h2>
-      <p class="block-content-info" data-animation-type="fadeInRightBig">
-        Here at Larkin’s Bar, we love our beers! From triples to porters, pale ales to pilseners, we have one of the widest varieties of craft beers in Hull.
-        <br><br>With over 25 bottled craft beers in our fridges, you’ll be guaranteed to find something to your taste.
-      </p>
-      <div class="call-to-action-buttons">
-        <%= link_to 'view our beers', '#', class: 'call-to-action-btn' %>
-      </div>
     </div>
+    <div class="beer-menu-title-wrapper">
+      <h2 class="sub-content-block-title">
+        Ale Beers
+      </h2>
+    </div>
+    <%= raw @ale_beers.content %>
+
   </div>
 </div>
-<div class="main-content-blocks">
-  <div class="booking-content-block">
-    <div class="content-block-sub-title">
-      how to
-    </div>
-    <h2 class="content-block-title">
-      book with us
-    </h2>
-    <p class="block-content-info" data-animation-type="fadeInLeftBig">
-
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
-
-      <br><br>Ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Ever since the 1500s.
-    </p>
-
-    <div class="call-to-action-buttons">
-      <%= link_to 'book a table', '#', class: 'call-to-action-btn' %>
-    </div>
-
-  </div>
-  <div class="image-content-block home-booking">
-    <%= link_to (image_tag 'home/home-booking-image.png', alt: 'Booking') %>
-  </div>
-</div>
-
 <div class="second-image-wrapper">
   <div class="hero-tagline">
     <div class="hero-tagline-wrapper">
       <div class="dine-title">
-        dine with us
+        drink with us
       </div>
-      <h2 class="larkins-menu-title" data-animation-type="fadeInDown">larkin's menu</h2>
+      <h2 class="larkins-menu-title" data-animation-type="fadeInDown">larkin's bar</h2>
     </div>
   </div>
 </div>
-<div class="main-content-blocks menu-home-content">
-  <div class="full-menu-content-block">
-    <h3 class="menu-content-block-title">
-      Starters
-    </h3>
-    <%= raw @starters_menu.content %>
-  </div>
-  <div class="full-menu-content-block">
-    <h3 class="menu-content-block-title">
-      Lunch Menu
-    </h3>
-    <%= raw @starters_menu.content %>
-  </div>
-  <div class="full-menu-content-block">
-    <h3 class="menu-content-block-title">
-      Main Menu
-    </h3>
-    <%= raw @starters_menu.content %>
-  </div>
-  <div class="home-menu-button-wrapper">
-    <%= link_to 'view our full menu', '#', class: 'call-to-action-btn' %>
+<div class="main-content-blocks menu-beer-content">
+  <div class="beer-full-menu-content-block">
+    <div class="beer-menu-title-wrapper">
+      <div class="content-block-sub-title beers-title">
+        discover
+      </div>
+      <h2 class="content-block-title beers-title">
+        Our Lager Beers
+      </h2>
+    </div>
+    <%= raw @lager_beers.content %>
   </div>
 </div>
-
 <div class="third-image-wrapper">
   <div class="main-content-transparent-blocks hero-content">
     <!-- row-->
@@ -110,326 +55,48 @@ button_text_1: 'View Menu', button_link_1: 'http://www.google.com', button_text_
       <div class="text-content-alignment">
         <div class="events-titles-wrapper">
           <div class="content-block-sub-title">
-            view events
+            taste our
           </div>
           <h2 class="content-block-title">
-            What's on at Larkin's
+            featured beer
           </h2>
+          <div class="featured-beer-title">
+            Früh Kölsch | 4.8%
+          </div>
         </div>
         <div class="event-content-wrapper">
           <!--- row-->
           <div class="events-content-block">
             <!-- 6 column -->
             <p class="whats-on-content">
-              Gummi bears jelly-o apple pie. Lollipop candy marshmallow candy canes fruitcake cake cake. Wafer cupcake croissant croissant. Donut jujubes jujubes biscuit cake caramels. Lollipop lemon drops marshmallow gingerbread croissant tootsie roll bonbon.
-              Toffee pudding powder.
+              Our featured beer of the month is our Früh Kölsch, Früh Kölsch is a top-fermented lager-type beer exclusively brewed in the city of Cologne and protected by Appellation Controlée.
+
             </p>
             <p class="whats-on-content">
-              Gummi bears jelly-o apple pie. Lollipop candy marshmallow candy canes fruitcake cake cake. Wafer cupcake croissant croissant.
+              This crisp and neat beer is a little more hoppy and sweeter than a regular lager, however. We stock Küppers and Früh’s kölschs - which are two of only the handful of major breweries still producing the beer.
             </p>
           </div>
 
           <div class="events-content-block">
             <div class="event-content-padding">
-              <p class="whats-on-content">
-                Gummi bears jelly-o apple pie. Lollipop candy marshmallow candy canes fruitcake cake cake. Wafer cupcake croissant croissant. Donut jujubes jujubes biscuit cake caramels. Lollipop lemon drops marshmallow gingerbread croissant tootsie roll bonbon.
-                Toffee pudding powder.
-              </p>
+              <%= link_to (image_tag 'beer/fruh-kolsch.png', alt: 'Featured beer', class:'featured-beer-logo') %>
             </div>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 </div>
-<div class="main-content-blocks hero-content">
-  <!-- row -->
-  <div class="contact-content-block">
-    <!-- 4 column -->
-    <%= content_for :footer do %>
-      <script>
-      function initMap() {
-        // Styles a map in night mode.
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 53.761655, lng: -0.358874},
-          zoom: 16,
-          styles: [
-    {
-        "featureType": "all",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "saturation": 36
-            },
-            {
-                "color": "#333333"
-            },
-            {
-                "lightness": 40
-            }
-        ]
-    },
-    {
-        "featureType": "all",
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#ffffff"
-            },
-            {
-                "lightness": 16
-            }
-        ]
-    },
-    {
-        "featureType": "all",
-        "elementType": "labels.icon",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#fefefe"
-            },
-            {
-                "lightness": 20
-            }
-        ]
-    },
-    {
-        "featureType": "administrative",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "color": "#fefefe"
-            },
-            {
-                "lightness": 17
-            },
-            {
-                "weight": 1.2
-            }
-        ]
-    },
-    {
-        "featureType": "administrative.locality",
-        "elementType": "labels",
-        "stylers": [
-            {
-                "color": "#3c667c"
-            },
-            {
-                "weight": "0.01"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#f5f5f5"
-            },
-            {
-                "lightness": 20
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#f5f5f5"
-            },
-            {
-                "lightness": 21
-            }
-        ]
-    },
-    {
-        "featureType": "poi.park",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#dedede"
-            },
-            {
-                "lightness": 21
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "labels",
-        "stylers": [
-            {
-                "color": "#c19c35"
-            },
-            {
-                "weight": "0.01"
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#ffffff"
-            },
-            {
-                "lightness": 17
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "color": "#ffffff"
-            },
-            {
-                "lightness": 29
-            },
-            {
-                "weight": 0.2
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#ffffff"
-            },
-            {
-                "lightness": 18
-            }
-        ]
-    },
-    {
-        "featureType": "road.local",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#ffffff"
-            },
-            {
-                "lightness": 16
-            }
-        ]
-    },
-    {
-        "featureType": "road.local",
-        "elementType": "labels",
-        "stylers": [
-            {
-                "color": "#c19c35"
-            }
-        ]
-    },
-    {
-        "featureType": "transit",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#f2f2f2"
-            },
-            {
-                "lightness": 19
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#e9e9e9"
-            },
-            {
-                "lightness": 17
-            }
-        ]
-    }
-]
-        });
-
-        var image = '<%= asset_url "map-pin.png" %>';
-        var marker = new google.maps.Marker({
-          position: {lat: 53.761559, lng: -0.358564},
-          map: map,
-          icon: image
-        });
-      }
-    </script>
-    <%= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAvZ5T4OiV3_B3AfeFIlfoU0cYClhl4Js8&callback=initMap', async: true, defer: true %>
-    <% end %>
-    <div id="map"></div>
-  </div>
-  <div class="contact-content-block">
-    <div class="content-block-sub-title">
-      want to
+<div class="main-content-blocks menu-beer-content">
+  <div class="beer-full-menu-content-block">
+    <div class="beer-menu-title-wrapper">
+      <div class="content-block-sub-title beers-title">
+        discover
+      </div>
+      <h2 class="content-block-title beers-title">
+        Our Fruit Beers
+      </h2>
     </div>
-    <h2 class="content-block-title">
-      Contact us
-    </h2>
-    <p class="block-content-info">
-
-      If you have any queries or would like to make a reservation please contact us and one of our friendly members of staff will be more than happy to help you:
-    </p>
-    <ul class="contact-block-wrapper">
-      <li class="block-content-info telephone-icon">
-        01293 33433
-      </li>
-      <li class="block-content-info address-icon">
-        48 Newland Ave Hull, <br>
-        HU5 3AE
-    </li>
-  </ul>
-
-
-  <div class="opening-times-title">
-    Opening Times
+    <%= raw @fruit_beers.content %>
   </div>
-  <ul class="contact-block-wrapper">
-  <li class="block-content-info time-icon">
-    Monday - Sunday
-  </li>
-    <li class="block-content-info without-icon">
-      11am - 11pm
-    </li>
-</ul>
-
-
-  <div class="opening-times-title">
-    Food Serving Times:
-  </div>
-  <ul class="contact-block-wrapper">
-  <li class="block-content-info food-icon">
-    Sunday - Thursday:
-    12pm - 8:30pm
-  </li>
-  <li class="block-content-info without-icon">
-    Friday & Saturday :
-    12pm - 8:00pm
-  </li>
-</ul>
-  <p class="block-content-info disabled-info">
-    Disabled access available, please feel welcome to call ahead if you’ll require assistance.
-  </p>
-</div>
 </div>
