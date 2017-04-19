@@ -1,30 +1,28 @@
-<%= render partial: 'layouts/shared/hero', locals: { text: '<h1 class="hero-tagline hero-standard-text">  grab a <span class="decorated-text">drink</span> at</br> larkins bar & restaurant </h1>',
-button_text_1: 'View Menu', button_link_1: 'http://www.google.com', button_text_2: 'Book Table', button_link_2: 'http://www.google.com', additional_classes: 'hero-image' } %>
-<div>
-</div>
-
-
-
+<%= render partial: 'layouts/shared/hero', locals: { text: '<h1 class="hero-tagline hero-standard-text"> grab a <span class="decorated-text">drink</span> at</br> larkins bar & restaurant </h1>', button_text_1: 'View Wine Menu', button_link_1:
+'http://www.google.com', button_text_2: 'View Craft Beers', button_link_2: 'http://www.google.com', additional_classes: 'hero-image' } %>
+<div></div>
 
 <div class="main-content-blocks menu-beer-content">
   <div class="beer-full-menu-content-block">
     <div class="beer-menu-title-wrapper">
-      <div class="beer-opacity-title"> Our Beers </div>
-    <div class="content-block-sub-title beers-title">
-      discover
+      <div class="beer-opacity-title">
+        Our Beers
+      </div>
+      <div class="content-block-sub-title beers-title">
+        discover
+      </div>
+      <h2 class="content-block-title beers-title">
+        Larkin's Favourites
+      </h2>
     </div>
-    <h2 class="content-block-title beers-title">
-      Larkin's Favourites
-    </h2>
-</div>
-<div class="beer-menu-title-wrapper">
-<h2 class="sub-content-block-title">
-  Ale Beers
-</h2>
-</div>
+    <div class="beer-menu-title-wrapper">
+      <h2 class="sub-content-block-title">
+        Ale Beers
+      </h2>
+    </div>
     <%= raw @ale_beers.content %>
 
-</div>
+  </div>
 </div>
 <div class="second-image-wrapper">
   <div class="hero-tagline">
@@ -39,16 +37,15 @@ button_text_1: 'View Menu', button_link_1: 'http://www.google.com', button_text_
 <div class="main-content-blocks menu-beer-content">
   <div class="beer-full-menu-content-block">
     <div class="beer-menu-title-wrapper">
-    <div class="content-block-sub-title beers-title">
-      discover
+      <div class="content-block-sub-title beers-title">
+        discover
+      </div>
+      <h2 class="content-block-title beers-title">
+        Our Lager Beers
+      </h2>
     </div>
-    <h2 class="content-block-title beers-title">
-      Our Lager Beers
-    </h2>
-</div>
     <%= raw @lager_beers.content %>
-
-</div>
+  </div>
 </div>
 <div class="third-image-wrapper">
   <div class="main-content-transparent-blocks hero-content">
@@ -63,16 +60,16 @@ button_text_1: 'View Menu', button_link_1: 'http://www.google.com', button_text_
           <h2 class="content-block-title">
             featured beer
           </h2>
-          <div class="featured-beer-title"> Früh Kölsch | 4.8% </div>
+          <div class="featured-beer-title">
+            Früh Kölsch | 4.8%
+          </div>
         </div>
         <div class="event-content-wrapper">
           <!--- row-->
           <div class="events-content-block">
             <!-- 6 column -->
             <p class="whats-on-content">
-              Our featured beer of the month is our Früh Kölsch, Früh Kölsch  is a top-fermented lager-type beer exclusively brewed in the city of Cologne and protected by Appellation Controlée.
-
-
+              Our featured beer of the month is our Früh Kölsch, Früh Kölsch is a top-fermented lager-type beer exclusively brewed in the city of Cologne and protected by Appellation Controlée.
 
             </p>
             <p class="whats-on-content">
@@ -93,15 +90,13 @@ button_text_1: 'View Menu', button_link_1: 'http://www.google.com', button_text_
 <div class="main-content-blocks menu-beer-content">
   <div class="beer-full-menu-content-block">
     <div class="beer-menu-title-wrapper">
-    <div class="content-block-sub-title beers-title">
-      discover
+      <div class="content-block-sub-title beers-title">
+        discover
+      </div>
+      <h2 class="content-block-title beers-title">
+        Our Fruit Beers
+      </h2>
     </div>
-    <h2 class="content-block-title beers-title">
-      Our Fruit Beers
-    </h2>
-</div>
     <%= raw @fruit_beers.content %>
-
-</div>
-
+  </div>
 </div>

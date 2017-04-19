@@ -25,6 +25,9 @@
   font-weight: 600;
   margin-top: rem(-30px);
   letter-spacing: rem(10px);
+  @include breakpoint (small only) {
+    display: none;
+  }
 }
 
 .menu-beer-content {
@@ -34,6 +37,7 @@
     }
     @include breakpoint (medium) {
       padding-top: rem(60px);
+      padding-bottom: rem(50px);
 
     }
 }
