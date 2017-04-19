@@ -68,5 +68,7 @@ margin-right: auto;
 }
 
 .beer-full-menu-content-block {
+  @include breakpoint (small only) {
   padding-bottom: rem(50px);
+}
 }
