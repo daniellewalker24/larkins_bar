@@ -513,6 +513,11 @@ body {
       bottom: 112px;
       text-align: center;
     }
+
+    @include breakpoint (medium only) {
+      width: 958px;
+      text-align: center;
+    }
 }
 
 .beer-content-wrapper {
