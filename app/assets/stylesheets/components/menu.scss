@@ -78,3 +78,31 @@ body {
     font-size: rem-calc(30px);
     letter-spacing: rem(5px);
 }
+
+
+// beers
+
+.beer-menu-content-block {
+    @include flex-grid-column($columns: 12, $gutter: 0);
+}
+
+
+
+
+.beer-menu-content-wrapper {
+  @include flex-grid-row;
+}
+
+
+
+
+
+
+.beer-menu-content-container {
+  @include flex-grid-column($columns: 4, $gutter: 0);
+  padding: rem-calc(0) rem-calc(40px) rem-calc(30px);
+  @include breakpoint(medium down) {
+       @include flex-grid-column($columns: 12, $gutter: 0);
+
+}
+}

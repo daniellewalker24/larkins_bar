@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  get 'beers', to: 'menu_sections#beers'
   resources :menu_sections, only: :index, path: 'menu'
   resources :lunch_menu_, only: :index, path: 'lunch_menu'
+  resources :craft_beers, only: :index, path: 'beers'
 
   namespace :admin do
     get 'user_instructions', to: 'pages#user_instructions'

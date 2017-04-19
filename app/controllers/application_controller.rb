@@ -9,3 +9,8 @@ class ApplicationController < ActionController::Base
 
   end
 end
+
+
+def beers
+
+end

@@ -15,3 +15,6 @@
 //= require turbolinks
 //= require smooth-scroll
 //= require slide-toggle
+//= require vendor/jquery.onscreen
+//= require vendor/modernizr
+//= require vendor/animate

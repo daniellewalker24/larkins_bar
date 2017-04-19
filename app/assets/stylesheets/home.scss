@@ -176,6 +176,9 @@ body {
     line-height: 0.3;
     font-family: $alex-brush;
     font-size: rem-calc(50px);
+    &.beers-title {
+      position: relative;
+    }
 }
 
 .content-block-title {
@@ -184,6 +187,10 @@ body {
     text-transform: uppercase;
     font-size: rem-calc(30px);
     letter-spacing: rem-calc(5px);
+
+    &.beers-title {
+      position: relative;
+    }
 }
 
 .block-content-intro {
@@ -403,6 +410,7 @@ body {
     @include breakpoint(medium down) {
          @include flex-grid-column($columns: 12, $gutter: 0);
     }
+
 }
 
 .button-container-wrapper {

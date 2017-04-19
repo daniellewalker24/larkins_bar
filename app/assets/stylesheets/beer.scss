@@ -1,0 +1,28 @@
+.beer-menu-title-wrapper {
+  padding-left: rem(40px);
+}
+
+
+
+.sub-content-block-title {
+    color: $white;
+    font-family: $abril-fatface;
+    text-transform: uppercase;
+    font-size: rem-calc(22px);
+    letter-spacing: rem-calc(4px);
+    padding-top: rem(20px);
+}
+
+
+.beer-opacity-title {
+  position: absolute;
+  opacity: 0.2;
+  font-size: rem(75px);
+  padding-bottom: rem(30px);
+  color: $golden-yellow;
+  font-family: $montserrat;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: rem(-30px);
+  letter-spacing: rem(10px);
+}
