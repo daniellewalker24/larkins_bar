@@ -26,3 +26,38 @@
   margin-top: rem(-30px);
   letter-spacing: rem(10px);
 }
+
+.menu-beer-content {
+    margin-top: $overlap;
+    @include breakpoint (small only) {
+        padding-top: rem(40px);
+    }
+    @include breakpoint (medium) {
+      padding-top: rem(60px);
+
+    }
+}
+
+.featured-beer-title {
+  color: $white;
+  font-family: $abril-fatface;
+  text-transform: uppercase;
+  letter-spacing: rem(4px);
+  padding-bottom: rem(20px);
+  background: image-url('beer/german-icon.svg');
+  background-repeat: no-repeat;
+  padding-left: rem(50px);
+  background-size: 25px;
+}
+
+.featured-beer-flag {
+  width: 20px;
+  height: 20px;
+}
+
+
+.featured-beer-logo {
+  margin-left: auto;
+  width: 330px;
+margin-right: auto;
+}

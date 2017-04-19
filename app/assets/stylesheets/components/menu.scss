@@ -100,7 +100,7 @@ body {
 
 .beer-menu-content-container {
   @include flex-grid-column($columns: 4, $gutter: 0);
-  padding: rem-calc(0) rem-calc(40px) rem-calc(30px);
+  padding: rem-calc(0) rem-calc(40px) rem-calc(0);
   @include breakpoint(medium down) {
        @include flex-grid-column($columns: 12, $gutter: 0);
 

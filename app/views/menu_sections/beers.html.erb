@@ -1,4 +1,4 @@
-<%= render partial: 'layouts/shared/hero', locals: { text: '<h1 class="hero-tagline hero-standard-text"> <span class="decorated-text">taste</span> our hearty menu<br /> and <span class="decorated-text">drink</span> our craft beers </h1>',
+<%= render partial: 'layouts/shared/hero', locals: { text: '<h1 class="hero-tagline hero-standard-text">  grab a <span class="decorated-text">drink</span> at</br> larkins bar & restaurant </h1>',
 button_text_1: 'View Menu', button_link_1: 'http://www.google.com', button_text_2: 'Book Table', button_link_2: 'http://www.google.com', additional_classes: 'hero-image' } %>
 <div>
 </div>
@@ -6,8 +6,7 @@ button_text_1: 'View Menu', button_link_1: 'http://www.google.com', button_text_
 
 
 
-<div class="main-content-blocks menu-home-content">
-
+<div class="main-content-blocks menu-beer-content">
   <div class="beer-full-menu-content-block">
     <div class="beer-menu-title-wrapper">
       <div class="beer-opacity-title"> Our Beers </div>
@@ -31,14 +30,13 @@ button_text_1: 'View Menu', button_link_1: 'http://www.google.com', button_text_
   <div class="hero-tagline">
     <div class="hero-tagline-wrapper">
       <div class="dine-title">
-        dine with us
+        drink with us
       </div>
-      <h2 class="larkins-menu-title" data-animation-type="fadeInDown">larkin's menu</h2>
+      <h2 class="larkins-menu-title" data-animation-type="fadeInDown">larkin's bar</h2>
     </div>
   </div>
 </div>
-<div class="main-content-blocks menu-home-content">
-
+<div class="main-content-blocks menu-beer-content">
   <div class="beer-full-menu-content-block">
     <div class="beer-menu-title-wrapper">
     <div class="content-block-sub-title beers-title">
@@ -52,18 +50,47 @@ button_text_1: 'View Menu', button_link_1: 'http://www.google.com', button_text_
 
 </div>
 </div>
-<div class="second-image-wrapper">
-  <div class="hero-tagline">
-    <div class="hero-tagline-wrapper">
-      <div class="dine-title">
-        dine with us
+<div class="third-image-wrapper">
+  <div class="main-content-transparent-blocks hero-content">
+    <!-- row-->
+    <div class="event-content-container">
+      <!--- 12 column -->
+      <div class="text-content-alignment">
+        <div class="events-titles-wrapper">
+          <div class="content-block-sub-title">
+            taste our
+          </div>
+          <h2 class="content-block-title">
+            featured beer
+          </h2>
+          <div class="featured-beer-title"> Früh Kölsch | 4.8% </div>
+        </div>
+        <div class="event-content-wrapper">
+          <!--- row-->
+          <div class="events-content-block">
+            <!-- 6 column -->
+            <p class="whats-on-content">
+              Our featured beer of the month is our Früh Kölsch, Früh Kölsch  is a top-fermented lager-type beer exclusively brewed in the city of Cologne and protected by Appellation Controlée.
+
+
+
+            </p>
+            <p class="whats-on-content">
+              This crisp and neat beer is a little more hoppy and sweeter than a regular lager, however. We stock Küppers and Früh’s kölschs - which are two of only the handful of major breweries still producing the beer.
+            </p>
+          </div>
+
+          <div class="events-content-block">
+            <div class="event-content-padding">
+              <%= link_to (image_tag 'beer/fruh-kolsch.png', alt: 'Featured beer', class:'featured-beer-logo') %>
+            </div>
+          </div>
+        </div>
       </div>
-      <h2 class="larkins-menu-title" data-animation-type="fadeInDown">larkin's menu</h2>
     </div>
   </div>
 </div>
-<div class="main-content-blocks menu-home-content">
-
+<div class="main-content-blocks menu-beer-content">
   <div class="beer-full-menu-content-block">
     <div class="beer-menu-title-wrapper">
     <div class="content-block-sub-title beers-title">
@@ -76,4 +103,5 @@ button_text_1: 'View Menu', button_link_1: 'http://www.google.com', button_text_
     <%= raw @fruit_beers.content %>
 
 </div>
+
 </div>
