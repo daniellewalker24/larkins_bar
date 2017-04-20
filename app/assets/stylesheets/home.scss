@@ -117,9 +117,12 @@ body {
     @include customised-flex-grid-row;
     background: image-url('home/overlay.png') left top repeat, $teal-blue;
     position: relative;
-    z-index: 2;
+    z-index: 6;
     &.menu-beer-content {
       @include content-block-background( 'beer/beer-underlay-1.png', 100%, 40%);
+    }
+    &.menu-beer-content-1 {
+      @include content-block-background( 'beer/beer-underlay-2.png', 100%, 40%);
     }
     @include breakpoint(medium only) {
         width: 95%;
