@@ -1,6 +1,6 @@
 body {
     background: image-url('bg-texture.png');
-  
+
 
 }
 
@@ -118,6 +118,9 @@ body {
     background: image-url('home/overlay.png') left top repeat, $teal-blue;
     position: relative;
     z-index: 2;
+    &.menu-beer-content {
+      @include content-block-background( 'beer/beer-underlay-1.png', 100%, 40%);
+    }
     @include breakpoint(medium only) {
         width: 95%;
     }
@@ -508,7 +511,8 @@ body {
     bottom: 200px;
     transform: translateX(-50%);
     @include breakpoint (medium only) {
-    bottom: 172px;
+    bottom: 188px;
+    width: 400px;
     }
 
     @include breakpoint (small only) {
