@@ -24,6 +24,9 @@ body {
     &.hero-image {
         background-image: image-url('home/hero-image.jpg');
     }
+    &.beer-hero-image {
+      background-image: image-url('beer/beer-hero-image.png')
+    }
 
     &.another-image {
         background-image: url('http://placehold.it/1920x800');
