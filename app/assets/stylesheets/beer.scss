@@ -35,6 +35,28 @@
     @include breakpoint (small only) {
         padding-top: rem(40px);
     }
+    &.first-underlay {
+      @include content-block-background( 'beer/beer-underlay-1.png', 100%, 40%);
+    }
+    &.second-underlay {
+      @include content-block-background( 'beer/beer-underlay-2.png', 100%, 40%);
+    }
+    &.third-underlay {
+      @include content-block-background( 'beer/beer-underlay-3.png', 100%, 40%);
+    }
+
+    @include breakpoint (medium) {
+      padding-top: rem(60px);
+      padding-bottom: rem(50px);
+
+    }
+}
+
+.menu-beer-content-1 {
+    margin-top: $overlap;
+    @include breakpoint (small only) {
+        padding-top: rem(40px);
+    }
     @include breakpoint (medium) {
       padding-top: rem(60px);
       padding-bottom: rem(50px);
