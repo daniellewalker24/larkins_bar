@@ -63,8 +63,10 @@
 .featured-beer-logo {
   margin-left: auto;
   width: 330px;
-  margin-left: rem(47px);
-margin-right: auto;
+  padding-left: rem(47px);
+  @include breakpoint (small only) {
+    padding-left: 0;
+  }
 }
 
 .beer-full-menu-content-block {
