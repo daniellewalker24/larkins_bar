@@ -76,6 +76,20 @@
   background-repeat: no-repeat;
   padding-left: rem(50px);
   background-size: 25px;
+
+}
+
+.featured-craft-beer-title {
+  color: $white;
+  font-family: $abril-fatface;
+  text-transform: uppercase;
+  letter-spacing: rem(4px);
+  padding-bottom: rem(20px);
+  background: image-url('beer/uk-icon.svg');
+  background-repeat: no-repeat;
+  padding-left: rem(50px);
+  background-size: 25px;
+
 }
 
 .featured-beer-flag {
@@ -97,4 +111,13 @@
   @include breakpoint (small only) {
   padding-bottom: rem(50px);
 }
+}
+
+.featured-craft-beer-logo {
+  margin-left: auto;
+  width: 330px;
+  padding-left: rem(90px);
+  @include breakpoint (small only) {
+    padding-left: 0;
+  }
 }
