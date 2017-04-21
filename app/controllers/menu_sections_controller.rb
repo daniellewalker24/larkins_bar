@@ -22,6 +22,13 @@ def craft_beers
 end
 
 def wine_list
-  
+  @menu_sections = MenuSection.all
+  @sparkling_wine = @menu_sections.find_by(area: "Sparkling Wine")
+  @white_wine = @menu_sections.find_by(area: "White Wine")
+  @red_wine = @menu_sections.find_by(area: "Red Wine")
+  @rose_wine = @menu_sections.find_by(area: "Rose Wine")
+
+
+
 end
 end

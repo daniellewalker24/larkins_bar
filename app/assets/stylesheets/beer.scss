@@ -37,6 +37,9 @@
     }
     &.first-underlay {
       @include content-block-background( 'beer/beer-underlay-1.png', 100%, 20%);
+      &.wine-list {
+        padding-top: rem(30px);
+      }
 
 
     }
