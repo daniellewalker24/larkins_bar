@@ -15,13 +15,13 @@
     <h3><%= sub_category %></h3>
 
   <% menu_items.each do |menu_section| %>
+  <div class="red">
     <%= menu_section.area %>
     <%= link_to 'View', menu_sections_path(anchor: "menu-#{menu_section.id}") %>
     <%= link_to 'Edit', edit_admin_menu_section_path(menu_section) %>
     <%= link_to 'Delete', admin_menu_section_path(menu_section), method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
   <% end %>
-
   <% end %>
-
   </div>
 <% end %>
