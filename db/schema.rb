@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170324105029) do
+ActiveRecord::Schema.define(version: 20170421102118) do
 
   create_table "admin_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "username"
@@ -22,10 +22,11 @@ ActiveRecord::Schema.define(version: 20170324105029) do
 
   create_table "menu_sections", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "area"
-    t.text     "content",    limit: 65535
-    t.datetime "created_at",                                     null: false
-    t.datetime "updated_at",                                     null: false
-    t.string   "category",                 default: "Main Menu"
+    t.text     "content",      limit: 65535
+    t.datetime "created_at",                                       null: false
+    t.datetime "updated_at",                                       null: false
+    t.string   "category",                   default: "Main Menu"
+    t.string   "sub_category",               default: "",          null: false
   end
 
 end

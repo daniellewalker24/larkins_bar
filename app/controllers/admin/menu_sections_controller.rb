@@ -70,6 +70,6 @@ class Admin::MenuSectionsController < Admin::BaseController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def menu_section_params
-      params.require(:menu_section).permit(:area, :content, :category)
+      params.require(:menu_section).permit(:area, :content, :category, :sub_category)
     end
 end

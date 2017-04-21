@@ -331,6 +331,7 @@ body {
     font-size: rem-calc(34px);
     letter-spacing: 5px;
     line-height: rem-calc(2px);
+    min-height: 47px;
     font-weight: 600;
     @include breakpoint(small only) {
         line-height: rem(40px);

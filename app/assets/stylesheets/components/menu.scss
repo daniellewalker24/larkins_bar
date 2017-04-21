@@ -1,11 +1,22 @@
-@import 'vendor/foundation/foundation',
-'lib/variables',
-'lib/mixins',
-'vendor/hamburgers';
+@import 'vendor/foundation/foundation', 'lib/variables', 'lib/mixins', 'vendor/hamburgers';
+
+#tinymce {
+
+  .menu-item-title,
+  .menu-item-price {
+      @include flex-grid-column($columns: 12, $gutter: (small: 0));
+      text-align: left;
+  }
+
+  .menu-item-price-padding {
+    padding-left: 0;
+  }
+}
 
 body {
-  background-color: $teal-blue;
+    background-color: $teal-blue;
 }
+
 .menu-item {
     @include flex-grid-row;
     border-bottom: 1px solid black;
@@ -15,60 +26,55 @@ body {
     @include flex-grid-column(8);
     font-size: 21px;
     font-weight: 500;
-
 }
 
 .menu-item-price {
-  @include flex-grid-column(4);
+    @include flex-grid-column(4);
     text-align: right;
     font-size: 19px;
 }
 
-
-
-
 .menu-content-wrapper {
-  @include flex-grid-row;
-
+    @include flex-grid-row;
 }
 
 .menu-content {
-  @include flex-grid-column($columns: 12);
+    @include flex-grid-column($columns: 12);
 }
 
 .menu-item-title {
-  @include flex-grid-column($columns: 10, $gutter: (small: 0));
-  line-height: 1.1;
-  color: $white;
-  font-family: $abril-fatface;
-  text-transform: uppercase;
-  font-size: rem(18px);
-  letter-spacing: rem(3px);
-  padding-top: rem(20px);
+    @include flex-grid-column($columns: 10, $gutter: (small: 0));
+    line-height: 1.1;
+    color: $white;
+    font-family: $abril-fatface;
+    text-transform: uppercase;
+    font-size: rem(18px);
+    letter-spacing: rem(3px);
+    padding-top: rem(20px);
 }
 
 .menu-item-price {
-  @include flex-grid-column($columns: 2, $gutter: (small: 0));
-  color: $white;
-  font-family: $abril-fatface;
-  padding-top: rem(15px);
+    @include flex-grid-column($columns: 2, $gutter: (small: 0));
+    color: $white;
+    font-family: $abril-fatface;
+    padding-top: rem(15px);
 }
 
 .menu-item-price-padding {
-  padding-left: rem(7px);
+    padding-left: rem(7px);
 }
 
 .menu-item-description {
-  color: $white;
-  font-family: $lato;
-  padding-top: rem(10px);
+    color: $white;
+    font-family: $lato;
+    padding-top: rem(10px);
 }
 
 .menu-section-title {
-  font-family: $abril-fatface;
-  color: $white;
-  text-transform: uppercase;
-  padding-left: rem(16px);
+    font-family: $abril-fatface;
+    color: $white;
+    text-transform: uppercase;
+    padding-left: rem(16px);
 }
 
 .menu-content-block-title {
@@ -78,36 +84,24 @@ body {
     font-size: rem-calc(30px);
     letter-spacing: rem(5px);
 }
-
-
 // beers
-
 .beer-menu-content-block {
     @include flex-grid-column($columns: 12, $gutter: 0);
 }
 
-
-
-
 .beer-menu-content-wrapper {
-  @include flex-grid-row;
+    @include flex-grid-row;
 }
-
-
-
-
-
 
 .beer-menu-content-container {
-  @include flex-grid-column($columns: 4, $gutter: 0);
-  padding: rem-calc(0) rem-calc(40px) rem-calc(0);
-  @include breakpoint(medium down) {
-       @include flex-grid-column($columns: 12, $gutter: 0);
-
-}
+    @include flex-grid-column($columns: 4, $gutter: 0);
+    padding: rem-calc(0) rem-calc(40px);
+    @include breakpoint(medium down) {
+         @include flex-grid-column($columns: 12, $gutter: 0);
+    }
 }
 
 .beer-drink-info {
-  color: $white;
-  font-family: $abril-fatface;
+    color: $white;
+    font-family: $abril-fatface;
 }

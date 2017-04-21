@@ -27,6 +27,11 @@
     <%= f.select :category, MenuSection::CATEGORY, prompt: 'Please select' %>
   </div>
   <div class="field">
+    <%= f.label :sub_category %>
+    <%#= f.text_field :area %>
+    <%= f.select :sub_category, MenuSection::SUB_CATEGORY, include_blank: 'None' %>
+  </div>
+  <div class="field">
     <%= f.label :content %>
     <%= f.text_area :content, class: 'editor' %>
   </div>

@@ -11,7 +11,17 @@ class MenuSectionsController < ApplicationController
       @ale_beers = @menu_sections.find_by(area: "Ale Beers")
       @lager_beers = @menu_sections.find_by(area: "Lager Beers")
       @wine_list = @menu_sections.find_by(area: "Wine List")
-      @craft_beers = @menu_sections.find_by(area: "Craft Beers")
       @fruit_beers = @menu_sections.find_by(area: "Fruit Beers")
+end
+
+def craft_beers
+  @menu_sections = MenuSection.all
+  @bricknell_brewery = @menu_sections.find_by(area: "Bricknell Brewery")
+  @bad_seed = @menu_sections.find_by(area: "Bad Seed")
+  @magic_rock = @menu_sections.find_by(area: "Magic Rock")
+end
+
+def wine_list
+  
 end
 end
