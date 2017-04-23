@@ -3,7 +3,6 @@ class MenuSectionsController < ApplicationController
     @menu_sections = MenuSection.all
     @larkins_favourites = @menu_sections.find_by(area: "Larkin's Favourites")
     @lunch_menu = @menu_sections.find_by(area: "Lunch Menu")
-    @craft_beers = @menu_sections.find_by(area: "Craft Beers")
     @sharing_platters = @menu_sections.find_by(area: "Sharing Platters")
   end
   def beers
@@ -27,8 +26,10 @@ def wine_list
   @white_wine = @menu_sections.find_by(area: "White Wine")
   @red_wine = @menu_sections.find_by(area: "Red Wine")
   @rose_wine = @menu_sections.find_by(area: "Rose Wine")
+end
 
-
-
+def lunch_menu
+  @menu_sections = MenuSection.all
+  @toasted_sandwiches = @menu_sections.find_by(area: "Toasted Sandwiches")
 end
 end
