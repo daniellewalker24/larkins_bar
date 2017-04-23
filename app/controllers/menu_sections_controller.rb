@@ -31,5 +31,7 @@ end
 def lunch_menu
   @menu_sections = MenuSection.all
   @toasted_sandwiches = @menu_sections.find_by(area: "Toasted Sandwiches")
+  @sandwiches = @menu_sections.find_by(area: "Sandwiches")
+  @pasta_and_risotto = @menu_sections.find_by(area: "Pasta & Risotto")
 end
 end
