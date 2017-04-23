@@ -1,0 +1,121 @@
+.lunch-full-menu-content-block {
+    @include flex-grid-column($columns: 6, $gutter: 0);
+    padding: rem-calc(0) rem-calc(40px) rem-calc(30px);
+    margin-top: rem(24px);
+    @include breakpoint(medium down) {
+         @include flex-grid-column($columns: 12, $gutter: 0);
+    }
+}
+
+
+.coloured-block {
+
+    background: image-url('beer/beer-underlay-1.png') 100% 20%, $periwinkle-blue;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+    .sub-content-block-title {
+      color: $black;
+      text-align: center;
+    }
+    .menu-item-title {
+      color: $black;
+    }
+    .menu-item-price {
+      color: $black;
+    }
+    .menu-item-description {
+      color: $black;
+    }
+}
+
+
+.lunch-menu-content {
+    margin-top: $overlap;
+    @include breakpoint (small only) {
+        padding-top: rem(40px);
+    }
+}
+
+.lunch-menu-title-wrapper {
+  @include customised-flex-grid-row;
+  margin-left: 0;
+  padding-left: rem(20px);
+}
+
+
+.lunch-menu-title-container {
+  @include flex-grid-column(6);
+
+}
+
+.lunch-menu-wrapper {
+  @include flex-grid-row;
+}
+
+
+.menu-item-intro {
+  font-family: $lato;
+  text-align: center;
+  padding-right: rem(40px);
+
+}
+
+.menu-item-title-intro {
+  color: $white;
+  font-family: $lato;
+  letter-spacing: 1px;
+  padding-top: rem(10px);
+  padding-bottom: rem(20px);
+  font-size: rem(14px);
+  padding-left: rem(14px);
+  padding-right: rem(9px);
+  &.lunch-special {
+    text-align: center;
+  }
+}
+
+.main-menu-item-title-intro {
+  color: $white;
+  font-family: $abril-fatface;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: rem(12px);
+  padding-left: rem(15px);
+
+}
+
+.lunch-special-wrapper {
+  @include flex-grid-row;
+}
+
+.lunch-special-container {
+  @include flex-grid-column(12);
+}
+
+.lunch-special-title {
+  color: $white;
+  text-align: center;
+  font-family: $abril-fatface;
+  text-transform: uppercase;
+
+  font-size: rem-calc(24px);
+  letter-spacing: rem-calc(4px);
+  padding-top: rem(20px);
+}
+
+.lunch-special-menu-item {
+  line-height: 1.1;
+  color: $white;
+  font-family: $abril-fatface;
+  text-transform: uppercase;
+  font-size: rem(18px);
+  text-align: center;
+  letter-spacing: rem(3px);
+}
+
+.lunch-special-description {
+  font-family: $lato;
+  padding-bottom: rem(30px);
+  color: $white;
+  text-align: center;
+}

@@ -34,5 +34,6 @@ def lunch_menu
   @sandwiches = @menu_sections.find_by(area: "Sandwiches")
   @pasta_and_risotto = @menu_sections.find_by(area: "Pasta & Risotto")
   @omelettes = @menu_sections.find_by(area: "Omelettes")
+  @lunch_favourites = @menu_sections.find_by(area: "Lunch Favourites")
 end
 end
