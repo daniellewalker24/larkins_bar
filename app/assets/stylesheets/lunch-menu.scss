@@ -119,3 +119,25 @@
   color: $white;
   text-align: center;
 }
+
+.find-favourites-title {
+  color: $white;
+  font-family: $abril-fatface;
+  letter-spacing: 3px;
+  font-size: 22px;
+  padding-left: 40px;
+}
+
+.favourites-wrapper {
+  @include flex-grid-row;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.favourites-container {
+  @include flex-grid-column(5);
+}
+
+.favourites-items {
+    @include flex-grid-column(7);
+}
