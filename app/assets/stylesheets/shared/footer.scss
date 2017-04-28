@@ -157,8 +157,18 @@
 
 .footer-copyright-info-wrapper {
   @include flex-grid-row;
-  margin: 0;
-  padding-bottom: rem(20px);
+
+  @include breakpoint(medium) {
+    padding-bottom: rem(20px);
+    padding-left: rem(40px);
+    padding-right: rem(40px);
+  }
+  @include breakpoint(small only) {
+    padding-left: rem(34px);
+    padding-right: rem(34px);
+    padding-bottom: rem(20px);
+    padding-bottom: rem(30px);
+  }
 }
 
 .footer-copyright-info {

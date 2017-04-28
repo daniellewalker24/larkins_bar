@@ -7,27 +7,54 @@
     }
 }
 
-
 .coloured-block {
-
     background: image-url('beer/beer-underlay-1.png') 100% 20%, $periwinkle-blue;
     background-repeat: no-repeat;
+    padding-top: rem(30px);
+    padding-bottom: rem(30px);
     margin-bottom: 20px;
+
+    &.main-menu {
+        color: $white;
+        background: none;
+        border-bottom: 1px solid red;
+        margin-left: rem(80px);
+        margin-right: rem(80px);
+    }
+
     .sub-content-block-title {
-      color: $black;
-      text-align: center;
+        color: $black;
+        text-align: center;
     }
+
     .menu-item-title {
-      color: $black;
+        color: $black;
     }
+
     .menu-item-price {
-      color: $black;
+        color: $black;
     }
+
     .menu-item-description {
-      color: $black;
+        color: $black;
+    }
+
+    .lunch-special-title {
+        color: $black;
+    }
+
+    .lunch-special-menu-item {
+        color: $black;
+    }
+
+    .lunch-special-description {
+        color: $black;
+    }
+
+    .menu-item-title-intro {
+        color: $black;
     }
 }
-
 
 .lunch-menu-content {
     margin-top: $overlap;
@@ -37,107 +64,198 @@
 }
 
 .lunch-menu-title-wrapper {
-  @include customised-flex-grid-row;
-  margin-left: 0;
-  padding-left: rem(20px);
+    @include customised-flex-grid-row;
+    margin-left: 0;
+    padding-left: rem(20px);
 }
 
-
 .lunch-menu-title-container {
-  @include flex-grid-column(6);
-
+    @include flex-grid-column(6);
 }
 
 .lunch-menu-wrapper {
-  @include flex-grid-row;
+    @include flex-grid-row;
 }
 
-
 .menu-item-intro {
-  font-family: $lato;
-  text-align: center;
-  padding-right: rem(40px);
-
+    font-family: $lato;
+    text-align: center;
+    padding-right: rem(40px);
 }
 
 .menu-item-title-intro {
-  color: $white;
-  font-family: $lato;
-  letter-spacing: 1px;
-  padding-top: rem(10px);
-  padding-bottom: rem(20px);
-  font-size: rem(14px);
-  padding-left: rem(14px);
-  padding-right: rem(9px);
-  &.lunch-special {
-    text-align: center;
-  }
+    color: $white;
+    font-family: $lato;
+    letter-spacing: 1px;
+    padding-top: rem(10px);
+    padding-bottom: rem(20px);
+    font-size: rem(14px);
+    padding-left: rem(14px);
+    padding-right: rem(9px);
+
+    &.lunch-special {
+        text-align: center;
+    }
 }
 
 .main-menu-item-title-intro {
-  color: $white;
-  font-family: $abril-fatface;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: rem(12px);
-  padding-left: rem(15px);
-
+    color: $white;
+    font-family: $abril-fatface;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: rem(12px);
+    padding-left: rem(15px);
 }
 
 .lunch-special-wrapper {
-  @include flex-grid-row;
+    @include flex-grid-row;
 }
 
 .lunch-special-container {
-  @include flex-grid-column(12);
+    @include flex-grid-column(6);
 }
 
 .lunch-special-title {
-  color: $white;
-  text-align: center;
-  font-family: $abril-fatface;
-  text-transform: uppercase;
-
-  font-size: rem-calc(24px);
-  letter-spacing: rem-calc(4px);
-  padding-top: rem(20px);
+    color: $white;
+    text-align: center;
+    font-family: $abril-fatface;
+    text-transform: uppercase;
+    font-size: rem-calc(24px);
+    letter-spacing: rem-calc(4px);
+    padding-top: rem(20px);
 }
 
 .lunch-special-menu-item {
-  line-height: 1.1;
-  color: $white;
-  font-family: $abril-fatface;
-  text-transform: uppercase;
-  font-size: rem(18px);
-  text-align: center;
-  letter-spacing: rem(3px);
+    line-height: 1.1;
+    color: $white;
+    font-family: $abril-fatface;
+    text-transform: uppercase;
+    font-size: rem(18px);
+    text-align: center;
+    letter-spacing: rem(3px);
 }
 
 .lunch-special-description {
-  font-family: $lato;
-  padding-bottom: rem(30px);
-  color: $white;
-  text-align: center;
+    font-family: $lato;
+    padding-bottom: rem(30px);
+    color: $white;
+    text-align: center;
 }
 
 .find-favourites-title {
-  color: $white;
-  font-family: $abril-fatface;
-  letter-spacing: 3px;
-  font-size: 22px;
-  padding-left: 40px;
-}
-
-.favourites-wrapper {
-  @include flex-grid-row;
-  padding-top: 40px;
-  padding-bottom: 40px;
+    color: $white;
+    font-family: $abril-fatface;
+    letter-spacing: 3px;
+    font-size: 22px;
+    padding-left: 70px;
 }
 
 .favourites-container {
-  @include flex-grid-column(5);
+    @include flex-grid-column(5);
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .favourites-items {
     @include flex-grid-column(7);
+}
+
+.favourites-content {
+    list-style: none;
+    margin-top: rem(25px);
+    padding-left: rem(40px);
+
+    li {
+        display: inline-block;
+        padding-right: rem(40px);
+        text-align: center;
+    }
+}
+
+.favourites-icon {
+    img {
+        width: 55px;
+    }
+}
+
+.favourite-title {
+    color: $white;
+    text-align: center;
+    font-family: $lato;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 700;
+    font-size: rem(12px);
+}
+
+.banner-wrapper {
+    padding-left: rem(130px);
+    padding-top: rem(100px);
+}
+
+.banner-image {
+    max-height: 310px;
+    padding-right: rem(100px);
+    width: 400px;
+}
+// main menu
+
+.main-menu-full-menu-content-block {
+    @include flex-grid-column($columns: 12, $gutter: 0);
+    padding: rem-calc(0) rem-calc(40px) rem-calc(30px);
+    margin-top: rem(24px);
+    @include breakpoint(medium down) {
+         @include flex-grid-column($columns: 12, $gutter: 0);
+    }
+}
+
+.main-menu-info-container {
+    @include flex-grid-column($columns: 12, $gutter: 0);
+}
+
+.two-courses-title {
+    font-family: $abril-fatface;
+    text-align: center;
+    font-size: rem(38px);
+    letter-spacing: rem(5px);
+}
+
+.two-course-info {
+    text-align: center;
+    font-family: $lato;
+}
+
+.menu-item-content-info {
+    color: $white;
+    font-family: $lato;
+    text-align: center;
+    padding-left: 150px;
+    font-family: "Lato";
+    padding-bottom: 33px;
+    padding-right: 150px;
+    line-height: 33px;
+  }
+
+  .main-menu-coloured-block {
+    @include flex-grid-column($columns: 6, $gutter: 0);
+    padding: rem-calc(0) rem-calc(40px) rem-calc(30px);
+    @include breakpoint(medium down) {
+         @include flex-grid-column($columns: 12, $gutter: 0);
+    }
+  }
+
+  .main-menu-info-wrapper {
+    @include flex-grid-row;
+  }
+
+  .main-menu-toppings {
+    @include flex-grid-column($columns: 6, $gutter: 0);
+    @include breakpoint(medium down) {
+         @include flex-grid-column($columns: 12, $gutter: 0);
+    }
+  }
+
+.side-menu-title-wrapper {
+  padding-left: rem(40px);
+  padding-top: rem(60px);
 }

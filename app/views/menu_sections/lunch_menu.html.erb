@@ -1,26 +1,24 @@
 <%= render partial: 'layouts/shared/hero', locals: { text: '<h1 class="hero-tagline hero-standard-text"> grab a <span class="decorated-text">drink</span> at</br> larkins bar & restaurant </h1>', button_text_1: 'View Main Menu', button_link_1:
 'http://www.google.com', additional_classes: 'beer-hero-image' } %>
-<div class="main-content-blocks menu-beer-content">
-  <div class="favourites-wrapper">
+<!--<div class="main-content-blocks menu-beer-content">
     <div class="favourites-container">
       <h2 class="find-favourites-title">FIND YOUR FAVOURITES:</h2>
     </div>
     <div class="favourites-items">
-      test</div>
-  </div>
-</div>
+      <ul class="favourites-content">
 
+        <li> <%= link_to (image_tag 'lunch-menu/sandwich-icon.png'), '#anchor', class:'favourites-icon smooth-scroll' %> <div class="favourite-title">Sandwiches</div></li>
+        <li> <%= link_to (image_tag 'lunch-menu/omelette-icon.png'), '#anchor', class:'favourites-icon smooth-scroll' %> <div class="favourite-title">Omelette</div></li>
+        <li> <%= link_to (image_tag 'lunch-menu/pasta-icon.png'), '#anchor', class:'favourites-icon smooth-scroll' %> <div class="favourite-title">Pasta</div></li>
+        <li> <%= link_to (image_tag 'lunch-menu/risotto-icon.png'), '#anchor', class:'favourites-icon smooth-scroll' %><div class="favourite-title">Risotto</div> </li>
 
-<div class="second-image-wrapper">
-  <div class="hero-tagline">
-    <div class="hero-tagline-wrapper">
-      <div class="dine-title">
-        drink with us
-      </div>
-      <h2 class="larkins-menu-title" data-animation-type="fadeInDown">larkin's bar</h2>
+      </ul>
     </div>
-  </div>
-</div>
+  </div>-->
+
+
+
+
 <div class="main-content-blocks menu-beer-content">
   <div class="lunch-menu-title-wrapper">
     <div class="lunch-menu-title-container">
@@ -44,7 +42,7 @@
       <div class="menu-item-title-intro">All sandwiches are served in white or wholemeal bread, with fries and slaw.</div>
     </div>
   </div>
-  <div class="lunch-menu-wrapper">
+  <div class="lunch-menu-wrapper" id="anchor">
     <div class="lunch-full-menu-content-block">
       <div class="beer-menu-title-wrapper">
 
@@ -144,8 +142,8 @@
 
 <div class="main-content-blocks menu-beer-content third-underlay">
 
-  <div class="lunch-special-wrapper">
-    <div class="lunch-special-container">
+    <div class="lunch-full-menu-content-block">
+      <div class="coloured-block">
       <div class="lunch-special-title">
         Lunch Special & Drink - £6.50
       </div>
@@ -170,5 +168,13 @@
       </div>
     </div>
   </div>
+    <div class="lunch-full-menu-content-block">
+      <div class="beer-menu-title-wrapper">
+        <h2 class="sub-content-block-title">
+          Pasta & Risotto
+        </h2>
+      </div>
+      <%= raw @pasta_and_risotto.content %>
 
+  </div>
 </div>

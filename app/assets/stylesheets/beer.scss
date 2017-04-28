@@ -1,10 +1,6 @@
 .beer-menu-title-wrapper {
-
-  padding-left: rem(40px);
+    padding-left: rem(40px);
 }
-
-
-
 
 .sub-content-block-title {
     color: $white;
@@ -13,23 +9,28 @@
     font-size: rem-calc(24px);
     letter-spacing: rem-calc(4px);
     padding-top: rem(20px);
+
+    &.centered {
+        text-align: center;
+        font-size: rem(36px);
+        padding-bottom: rem(20px);
+    }
 }
 
-
 .beer-opacity-title {
-  position: absolute;
-  opacity: 0.2;
-  font-size: rem(75px);
-  padding-bottom: rem(30px);
-  color: $golden-yellow;
-  font-family: $montserrat;
-  text-transform: uppercase;
-  font-weight: 600;
-  margin-top: rem(-30px);
-  letter-spacing: rem(10px);
-  @include breakpoint (small only) {
-    display: none;
-  }
+    position: absolute;
+    opacity: 0.2;
+    font-size: rem(75px);
+    padding-bottom: rem(30px);
+    color: $golden-yellow;
+    font-family: $montserrat;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: rem(-30px);
+    letter-spacing: rem(10px);
+    @include breakpoint (small only) {
+        display: none;
+    }
 }
 
 .menu-beer-content {
@@ -37,25 +38,25 @@
     @include breakpoint (small only) {
         padding-top: rem(40px);
     }
+
     &.first-underlay {
-      @include content-block-background( 'beer/beer-underlay-1.png', 100%, 20%);
-      &.wine-list {
-        padding-top: rem(30px);
-      }
+        @include content-block-background( 'beer/beer-underlay-1.png', 100%, 20%);
 
-
+        &.wine-list {
+            padding-top: rem(30px);
+        }
     }
+
     &.second-underlay {
-      @include content-block-background( 'beer/beer-underlay-2.png', 100%, 40%);
+        @include content-block-background( 'beer/beer-underlay-2.png', 100%, 40%);
     }
+
     &.third-underlay {
-      @include content-block-background( 'beer/beer-underlay-3.png', 100%, 40%);
+        @include content-block-background( 'beer/beer-underlay-3.png', 100%, 40%);
     }
-
     @include breakpoint (medium) {
-      padding-top: rem(60px);
-      padding-bottom: rem(50px);
-
+        padding-top: rem(60px);
+        padding-bottom: rem(50px);
     }
 }
 
@@ -65,64 +66,64 @@
         padding-top: rem(40px);
     }
     @include breakpoint (medium) {
-      padding-top: rem(60px);
-      padding-bottom: rem(50px);
-
+        padding-top: rem(60px);
+        padding-bottom: rem(50px);
     }
 }
 
 .featured-beer-title {
-  color: $white;
-  font-family: $abril-fatface;
-  text-transform: uppercase;
-  letter-spacing: rem(4px);
-  padding-bottom: rem(20px);
-  background: image-url('beer/german-icon.svg');
-  background-repeat: no-repeat;
-  padding-left: rem(50px);
-  background-size: 25px;
-
+    color: $white;
+    font-family: $abril-fatface;
+    text-transform: uppercase;
+    letter-spacing: rem(4px);
+    padding-bottom: rem(20px);
+    background: image-url('beer/german-icon.svg');
+    background-repeat: no-repeat;
+    padding-left: rem(50px);
+    background-size: 25px;
 }
 
 .featured-craft-beer-title {
-  color: $white;
-  font-family: $abril-fatface;
-  text-transform: uppercase;
-  letter-spacing: rem(4px);
-  padding-bottom: rem(20px);
-  background: image-url('beer/uk-icon.svg');
-  background-repeat: no-repeat;
-  padding-left: rem(50px);
-  background-size: 25px;
-
+    color: $white;
+    font-family: $abril-fatface;
+    text-transform: uppercase;
+    letter-spacing: rem(4px);
+    padding-bottom: rem(20px);
+    background: image-url('beer/uk-icon.svg');
+    background-repeat: no-repeat;
+    padding-left: rem(50px);
+    background-size: 25px;
 }
 
 .featured-beer-flag {
-  width: 20px;
-  height: 20px;
+    width: 20px;
+    height: 20px;
 }
 
-
 .featured-beer-logo {
-  margin-left: auto;
-  width: 330px;
-  padding-left: rem(47px);
-  @include breakpoint (small only) {
-    padding-left: 0;
-  }
+    margin-left: auto;
+    width: 330px;
+    padding-left: rem(47px);
+    @include breakpoint (small only) {
+        padding-left: 0;
+    }
 }
 
 .beer-full-menu-content-block {
-  @include breakpoint (small only) {
-  padding-bottom: rem(50px);
-}
+    @include breakpoint (small only) {
+        padding-bottom: rem(50px);
+    }
 }
 
 .featured-craft-beer-logo {
-  margin-left: auto;
-  width: 330px;
-  padding-left: rem(90px);
-  @include breakpoint (small only) {
-    padding-left: 0;
-  }
+    margin-left: auto;
+    width: 330px;
+    padding-left: rem(90px);
+    @include breakpoint (small only) {
+        padding-left: 0;
+    }
+}
+
+.beer-full-menu-content-block {
+  width: 100%;
 }

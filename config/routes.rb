@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   get 'craft-beers', to: 'menu_sections#craft_beers'
   get 'wine-list', to: 'menu_sections#wine_list'
-    get 'lunch-menu', to: 'menu_sections#lunch_menu'
+  get 'lunch-menu', to: 'menu_sections#lunch_menu'
+  get 'main-menu', to: 'menu_sections#main_menu'
 
   namespace :admin do
     get 'user_instructions', to: 'pages#user_instructions'
