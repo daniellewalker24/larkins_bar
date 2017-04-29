@@ -4,7 +4,7 @@ var $root;
 function smoothScroll(elem) {
   $root.animate({
     scrollTop: $(elem).offset().top
-  }, 500, function () {
+  }, 800, function () {
     window.location.hash = elem;
   });
 }
