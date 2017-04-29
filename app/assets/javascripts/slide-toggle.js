@@ -4,20 +4,39 @@ $(document).on('click', '.click-me', function(){
 
 
 $(document).on('click', '.toggle-menu', function(e) {
-  console.log('test');
-  var toggleClass = $(this).data('class');
+  var toggleClass = $(this).data('class');
+
+  var method = 'fade';
+
+  if (Modernizr.mq('only screen and (max-width: 767px)')) {
+    method = 'hide';
+  }
 
   if($('.toggle-menu').not($(this)).hasClass('clicked')) {
-    $('.menu-item-container').fadeTo('fast', 1);
     $('.toggle-menu').removeClass('clicked');
+
+    if(method == 'fade') {
+      $('.menu-item-container').fadeTo('fast', 1);
+    } else if(method == 'hide') {
+      $('.menu-item-container').slideDown();
+    }
   }
 
   $(this).toggleClass('clicked');
-  // $('.menu-item:not(.' + toggleClass + ')').fadeTo('fast', 0.5);
-  if($(this).hasClass('clicked')) {
-    $('.menu-item-container:not(.' + toggleClass + ')').fadeTo('fast', 0.1);
-  } else {
-    $('.menu-item-container:not(.' + toggleClass + ')').fadeTo('fast', 1);
+
+  if(method == 'fade') {
+    if($(this).hasClass('clicked')) {
+      $('.menu-item-container:not(.' + toggleClass + ')').fadeTo('fast', 0.1);
+    } else {
+      $('.menu-item-container:not(.' + toggleClass + ')').fadeTo('fast', 1);
+    }
+  } else if(method == 'hide') {
+    if($(this).hasClass('clicked')) {
+      $('.menu-item-container:not(.' + toggleClass + ')').slideUp();
+    } else {
+      $('.menu-item-container:not(.' + toggleClass + ')').slideDown();
+    }
   }
-  return false;
+
+  return false;
 });
