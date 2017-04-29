@@ -1,7 +1,7 @@
 
 
 <%= render partial: 'layouts/shared/hero', locals: { text: '<h1 class="hero-tagline hero-standard-text"> <span class="decorated-text">taste</span> our hearty menu<br /> and <span class="decorated-text">drink</span> our craft beers </h1>',
-button_text_1: 'View Menu', button_link_1: 'http://www.google.com', button_text_2: 'Book Table', button_link_2: '#booking', class:'smooth-scroll', additional_classes: 'hero-image' } %>
+button_text_1: 'View Menu', button_link_1: '/main-menu', button_text_2: 'Book Table', button_link_2: '#booking', class:'smooth-scroll', additional_classes: 'hero-image' } %>
 
 <div class="main-content-blocks hero-content" id="anchor">
   <div class="content-block">
@@ -38,7 +38,7 @@ button_text_1: 'View Menu', button_link_1: 'http://www.google.com', button_text_
         <br><br>With over 25 bottled craft beers in our fridges, you’ll be guaranteed to find something to your taste.
       </p>
       <div class="call-to-action-buttons">
-        <%= link_to 'view our beers', '#', class: 'call-to-action-btn' %>
+        <%= link_to 'view our beers', '/beers', class: 'call-to-action-btn' %>
       </div>
     </div>
   </div>
@@ -59,7 +59,7 @@ button_text_1: 'View Menu', button_link_1: 'http://www.google.com', button_text_
     </p>
 
     <div class="call-to-action-buttons">
-      <%= link_to 'book a table', '#', class: 'call-to-action-btn' %>
+      <%= link_to 'book a table', '#contact', class: 'call-to-action-btn' %>
     </div>
 
   </div>
@@ -98,7 +98,7 @@ button_text_1: 'View Menu', button_link_1: 'http://www.google.com', button_text_
     <%= raw @home_main_menu.content %>
   </div>
   <div class="home-menu-button-wrapper">
-    <%= link_to 'view our full menu', '#', class: 'call-to-action-btn' %>
+    <%= link_to 'view our full menu', '/main-menu', class: 'call-to-action-btn' %>
   </div>
 </div>
 
