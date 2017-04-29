@@ -17,9 +17,12 @@
     &.main-menu {
         color: $white;
         background: none;
-        border-bottom: 1px solid red;
+        border-bottom: 1px solid $periwinkle-blue;
         margin-left: rem(80px);
         margin-right: rem(80px);
+    }
+    &.burger-toppings {
+      padding-bottom: rem(15px);
     }
 
     .sub-content-block-title {
@@ -246,6 +249,7 @@
 
   .main-menu-info-wrapper {
     @include flex-grid-row;
+    padding-left: rem(30px);
   }
 
   .main-menu-toppings {
@@ -258,4 +262,96 @@
 .side-menu-title-wrapper {
   padding-left: rem(40px);
   padding-top: rem(60px);
+}
+
+.larkins-banner-title {
+  font-family: $abril-fatface;
+  color: $white;
+  font-size: rem(30px);
+  letter-spacing: rem(5px);
+  text-transform: uppercase;
+  &.desserts {
+    padding-bottom: rem(10px);
+  }
+}
+
+.larkins-coffe-sub-title {
+  color: $white;
+  font-family: $lato;
+  font-size: rem(20px);
+  font-weight: 700;
+  letter-spacing: rem(5px);
+}
+
+.larkins-banner-sub-title {
+  font-family: $lato;
+  color: $white;
+  letter-spacing: rem(5px);
+  text-transform: uppercase;
+}
+
+.kids-eat-free-info {
+  color: $white;
+  font-family: $lato;
+  letter-spacing: rem(2px);
+  font-size: rem(14px);
+  padding-bottom: rem(20px);
+}
+
+.kids-eat-free-wrapper {
+  @include flex-grid-row;
+}
+
+.kids-eat-free-content {
+  @include flex-grid-column(6);
+}
+
+.kids-eat-free-content-wrapper {
+  list-style: none;
+  margin-left: 0;
+  font-family: $abril-fatface;
+  text-align: left;
+  letter-spacing: rem(4px);
+}
+
+.burger-topping-title {
+  color: $black;
+  font-family: $lato;
+  padding-bottom: rem(10px);
+}
+
+.main-menu-toppings {
+  list-style: none;
+}
+.toppings-wrapper {
+  list-style: none;
+  margin-left: 0;
+  font-family: $abril-fatface;
+  text-transform: uppercase;
+  letter-spacing: rem(2px);
+  font-size: rem(14px);
+}
+
+.allergy-info {
+  text-align: center;
+  font-size: $lato;
+  color: $black;
+  padding: rem(30px);
+  font-weight: 700;
+  letter-spacing: rem(2px);
+  font-size: rem(12px);
+}
+
+.food-filter-title {
+  color: $white;
+  font-family: $lato;
+  text-transform: uppercase;
+  letter-spacing: rem(2px);
+  font-weight: 700;
+}
+
+.filter-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: rem(10px);
 }

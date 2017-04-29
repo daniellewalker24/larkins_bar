@@ -10,15 +10,18 @@
         </strong>- Terms apply.</div>
     </div>
   </div>
+  <div class="filter-wrapper">
+    <div class="food-filter-title">
+      Only Show Me:
+      <%= link_to (image_tag '/gluten-free.svg', width:20, height:20), '#', class: 'toggle-menu', data: { class: 'gluten-free' } %>
+      <%= link_to (image_tag '/deal-icon.svg', width:20, height:20), '#', class: 'toggle-menu', data: { class: 'deal' } %>
+      <%= link_to (image_tag '/vegetarian-icon.svg', width:20, height:20), '#', class: 'toggle-menu', data: { class: 'vegetarian' } %>
+    </div>
+  </div>
   <div class="main-menu-full-menu-content-block">
     <h2 class="sub-content-block-title centered">
       Small Plates
     </h2>
-
-    <%= link_to 'Vegetarian', '#', class: 'toggle-menu' , data: { class: 'vegetarian' } %>
-    <%= link_to 'Gluten free', '#', class: 'toggle-menu' , data: { class: 'gluten-free' } %>
-    <%= link_to 'Deal', '#', class: 'toggle-menu' , data: { class: 'deal' } %>
-
 
     <%= raw @small_plates.content %>
   </div>
@@ -57,12 +60,12 @@
 </div>
 </div>
 <div class="second-image-wrapper">
-  <div class="hero-tagline">
-    <div class="hero-tagline-wrapper">
-      <div class="larkins-coffee-title ">LARKIN'S COFFEE & CAKE BREAK</div>
-      ONLY £3.95 I 2PM - 4PM
-    </div>
+<div class="hero-tagline">
+  <div class="hero-tagline-wrapper">
+    <div class="larkins-banner-title ">LARKIN'S COFFEE & CAKE BREAK</div>
+    <div class="larkins-coffe-sub-title">ONLY £3.95 I 2PM - 4PM</div>
   </div>
+</div>
 </div>
 <div class="main-content-blocks menu-beer-content second-underlay">
 <div class="main-menu-full-menu-content-block">
@@ -72,102 +75,139 @@
   <div class="menu-item-content-info">All of our burgers are made from locally sourced meat, blended with our signature seasoning, formed and pressed on site and served in a bun with salad, homemade coleslaw and french fries. All of the meat used in our burgers are Gluten Free.</div>
   <%= raw @larkins_burgers.content %>
   <div class="main-menu-coloured-block">
-    <div class="coloured-block">
+    <div class="coloured-block burger-toppings">
       <div class="main-menu-info-wrapper">
-      Add any toppings for £1 each:
-      <div class="main-menu-toppings">
-        <li>Cheddar</li>
-        <li>Mozzarella</li>
-        <li>Deep Fried Brie</li>
-      </div>
-      <div class="main-menu-toppings">
-          <li>Crispy Bacon</li>
-          <li>Choritzo</li>
-          <li>Fried Egg</li>
+        <div class="burger-topping-title">
+          Add any toppings for £1 each:</div>
+        <div class="main-menu-toppings">
+          <ul class="toppings-wrapper">
+            <li>Cheddar</li>
+            <li>Mozzarella</li>
+            <li>Deep Fried Brie</li>
+          </ul>
+        </div>
+        <div class="main-menu-toppings">
+          <ul class="toppings-wrapper">
+            <li>Crispy Bacon</li>
+            <li>Choritzo</li>
+            <li>Fried Egg</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
   </div>
 </div>
 </div>
 
 <div class="second-image-wrapper">
-  <div class="hero-tagline">
-    <div class="hero-tagline-wrapper">
-      <div class="larkins-coffee-title ">Kids eat free</div>
-      ONLY £3.95 I 2PM - 4PM
+<div class="hero-tagline">
+  <div class="hero-tagline-wrapper">
+    <div class="larkins-banner-title ">Kids eat free</div>
+    <div class="larkins-banner-sub-title">MONDAY - FRIDAY 12PM - 4PM</div>
+    <div class="kids-eat-free-info">One child per adult; aged 8 and under. T&C apply</div>
+  </div>
+
+  <div class="kids-eat-free-wrapper">
+    <div class="kids-eat-free-content">
+      <ul class="kids-eat-free-content-wrapper">
+        <li>
+          SAUSAGE & CHIPS
+        </li>
+        <li>CHEESE & TOMATO PASTA
+        </li>
+      </ul>
+    </div>
+    <div class="kids-eat-free-content">
+      <ul class="kids-eat-free-content-wrapper">
+        <li>PIZZA BREAD & CHIPS
+        </li>
+        <li>HAM OR EGG & CHIPS
+        </li>
+      </ul>
     </div>
   </div>
 </div>
+</div>
 <div class="main-content-blocks menu-beer-content">
-  <div class="lunch-menu-wrapper" id="anchor">
-    <div class="lunch-full-menu-content-block">
+<div class="lunch-menu-wrapper" id="anchor">
+  <div class="lunch-full-menu-content-block">
+    <div class="beer-menu-title-wrapper">
+      <h2 class="sub-content-block-title">
+        Salads
+      </h2>
+    </div>
+    <%= raw @salads.content %>
+  </div>
+  <div class="lunch-full-menu-content-block">
+    <div class="coloured-block">
       <div class="beer-menu-title-wrapper">
         <h2 class="sub-content-block-title">
-          Salads
+          Sharing Platters
         </h2>
       </div>
-      <%= raw @salads.content %>
+      <%= raw @sharing_platters.content %>
     </div>
-    <div class="lunch-full-menu-content-block">
-      <div class="coloured-block">
-        <div class="beer-menu-title-wrapper">
-          <h2 class="sub-content-block-title">
-            Sharing Platters
-          </h2>
-        </div>
-        <%= raw @sharing_platters.content %>
-      </div>
-      <div class="coloured-block">
+    <div class="coloured-block">
+      <div class="allergy-info">
         IF YOU HAVE ANY ALLERCIES PLEASE INFORM A MEMBER OF STAFF SO WE CAN HELP!
       </div>
     </div>
   </div>
 </div>
-<div class="second-image-wrapper">dsds
+</div>
+<div class="second-image-wrapper">
+<div class="hero-tagline">
+  <div class="hero-tagline-wrapper">
+    <div class="larkins-banner-title desserts">DESSERTS ALL £3.95</div>
+    <div class="kids-eat-free-info">WITH A CHOICE OF WHIPPED CREAM, ICE-CREAM OR POURING CREAM! Please ask a member of staff for desserts of the day.</div>
+  </div>
+</div>
 </div>
 </div>
 <div class="main-content-blocks menu-beer-content second-underlay">
 <div class="main-menu-full-menu-content-block">
-  <h2 class="sub-content-block-title centered">
-    Larkin's Favourites
-  </h2>
-  <%= raw @larkins_favourites.content %>
-  <div class="main-menu-coloured-block">
-  </div>
+<h2 class="sub-content-block-title centered">
+  Larkin's Favourites
+</h2>
+<%= raw @larkins_favourites.content %>
+<div class="main-menu-coloured-block"></div>
 </div>
 </div>
-<div class="second-image-wrapper">dsds
+<div class="second-image-wrapper">
+<div class="hero-tagline">
+<div class="hero-tagline-wrapper">
+  <div class="larkins-banner-title desserts">ALLERGIES INTOLERANCES</div>
+  <div class="kids-eat-free-info">If you have any allergies please inform a member of staff so we can help.</div>
+  <div class="kids-eat-free-info">Best efforts are always made to ensure products marked as gluten free are kept as such. However as all food is prepared in the same kitchen we cannot guarantee cross contamination will not occur.</div>
+</div>
+</div>
 </div>
 <div class="main-content-blocks menu-beer-content">
-  <div class="lunch-menu-wrapper" id="anchor">
-    <div class="lunch-full-menu-content-block">
-      <div class="beer-menu-title-wrapper">
-        <h2 class="sub-content-block-title">
-          On the Side
-        </h2>
-      </div>
-      <%= raw @sides.content %>
-      <div class="side-menu-title-wrapper">
-        <h2 class="sub-content-block-title">
-           Sharing Sides
-        </h2>
-      </div>
-      <%= raw @sharing_sides.content %>
-    </div>
-
-    <div class="lunch-full-menu-content-block">
-      <div class="coloured-block">
-        <div class="beer-menu-title-wrapper">
-          <h2 class="sub-content-block-title">
-            Larkin's Sizzlers
-          </h2>
-        </div>
-        <%= raw @larkins_sizzlers.content %>
-      </div>
-      <div class="coloured-block">
-        IF YOU HAVE ANY ALLERCIES PLEASE INFORM A MEMBER OF STAFF SO WE CAN HELP!
-      </div>
-    </div>
+<div class="lunch-menu-wrapper" id="anchor">
+<div class="lunch-full-menu-content-block">
+  <div class="beer-menu-title-wrapper">
+    <h2 class="sub-content-block-title">
+      On the Side
+    </h2>
   </div>
+  <%= raw @sides.content %>
+  <div class="side-menu-title-wrapper">
+    <h2 class="sub-content-block-title">
+      Sharing Sides
+    </h2>
+  </div>
+  <%= raw @sharing_sides.content %>
+</div>
+
+<div class="lunch-full-menu-content-block">
+  <div class="coloured-block">
+    <div class="beer-menu-title-wrapper">
+      <h2 class="sub-content-block-title">
+        Larkin's Sizzlers
+      </h2>
+    </div>
+    <%= raw @larkins_sizzlers.content %>
+  </div>
+</div>
+</div>
 </div>
