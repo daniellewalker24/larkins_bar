@@ -2,7 +2,7 @@
   <div class="hero-button-wrapper">
 
   <%= link_to button_text_1, button_link_1, class: 'call-to-action-btn' if defined?(button_text_1) && defined?(button_link_1) %>
-  <%= link_to button_text_2, button_link_2, class: 'secondary-submit-button' if defined?(button_text_2) && defined?(button_link_2) %>
+  <%= link_to button_text_2, button_link_2, class: 'secondary-submit-button smooth-scroll' if defined?(button_text_2) && defined?(button_link_2) %>
 </div>
 <% if Time.now > Time.parse('11:00:00') && Time.now < Time.parse('23:00:00') %>
   <p class="hero-banner-opening-times"><%= l Time.now, format: :opening_day %> - it’s <%= l Date.today, format: :opening_day %>, we’re open!</p>
