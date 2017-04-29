@@ -3,7 +3,7 @@
 <%= render partial: 'layouts/shared/hero', locals: { text: '<h1 class="hero-tagline hero-standard-text"> <span class="decorated-text">taste</span> our hearty menu<br /> and <span class="decorated-text">drink</span> our craft beers </h1>',
 button_text_1: 'View Menu', button_link_1: 'http://www.google.com', button_text_2: 'Book Table', button_link_2: 'http://www.google.com', additional_classes: 'hero-image' } %>
 
-<div class="main-content-blocks hero-content">
+<div class="main-content-blocks hero-content" id="anchor">
   <div class="content-block">
     <div class="content-block-sub-title">
       discover
@@ -21,7 +21,7 @@ button_text_1: 'View Menu', button_link_1: 'http://www.google.com', button_text_
     <%= link_to (image_tag 'home/home.png', alt: 'Larkins Bar') %>
   </div>
 </div>
-<div class="main-content-blocks">
+<div class="main-content-blocks" id="beer">
   <div class="larger-content-block home-beer">
     <%= link_to (image_tag 'home/home-beers-image.png', alt: 'Larkins Beers') %>
   </div>
@@ -43,7 +43,7 @@ button_text_1: 'View Menu', button_link_1: 'http://www.google.com', button_text_
     </div>
   </div>
 </div>
-<div class="main-content-blocks">
+<div class="main-content-blocks" id="booking">
   <div class="booking-content-block">
     <div class="content-block-sub-title">
       how to
@@ -78,7 +78,7 @@ button_text_1: 'View Menu', button_link_1: 'http://www.google.com', button_text_
     </div>
   </div>
 </div>
-<div class="main-content-blocks menu-home-content">
+<div class="main-content-blocks menu-home-content" id="menu">
   <div class="full-menu-content-block">
     <h3 class="menu-content-block-title">
       Small Plates
@@ -102,7 +102,7 @@ button_text_1: 'View Menu', button_link_1: 'http://www.google.com', button_text_
   </div>
 </div>
 
-<div class="third-image-wrapper">
+<div class="third-image-wrapper" id="events">
   <div class="main-content-transparent-blocks hero-content">
     <!-- row-->
     <div class="event-content-container">
@@ -143,7 +143,7 @@ button_text_1: 'View Menu', button_link_1: 'http://www.google.com', button_text_
 
   </div>
 </div>
-<div class="main-content-blocks hero-content">
+<div class="main-content-blocks hero-content" id="contact">
   <!-- row -->
   <div class="contact-content-block">
     <!-- 4 column -->
