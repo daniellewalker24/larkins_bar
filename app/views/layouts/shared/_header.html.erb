@@ -37,8 +37,8 @@
             <%= link_to 'Home', root_url, title: 'Home' %>
           </li>
           <li>
+<%= link_to 'About', root_url(anchor: 'anchor'), title:'About', class:'smooth-scroll' %>
 
-            <%= link_to 'About', '#anchor' , title: 'About', class:'smooth-scroll' %>
           </li>
           <li>
             <%= link_to 'Beers', '#beer' , title: 'Beers', class:'smooth-scroll' %>
@@ -58,11 +58,11 @@
         </ul>
         <ul class="primary-navigation-social-icons">
           <li>
-            <%= link_to (image_tag 'shared/header/facebook-icon.svg', class: 'nav-social-media', alt: 'Facebook'), 'https://www.facebook.com/LarkinsBar/' %>
-            <%= link_to (image_tag 'shared/header/twitter-icon.svg', class: 'nav-social-media', alt: 'Twitter'), 'https://twitter.com/larkinsbar' %>
+            <%= link_to (image_tag 'shared/header/facebook-icon.svg', class: 'nav-social-media', alt: 'Facebook'), 'https://www.facebook.com/LarkinsBar/', target: '_blank', rel:'noopener noreferrer' %>
+            <%= link_to (image_tag 'shared/header/twitter-icon.svg', class: 'nav-social-media', alt: 'Twitter'), 'https://twitter.com/larkinsbar', target: '_blank', rel:'noopener noreferrer' %>
             <%= link_to (image_tag 'shared/header/tripadvisor-icon.svg', class: 'nav-social-media', alt: 'Tripadvisor'),
-            'https://www.tripadvisor.co.uk/Restaurant_Review-g186317-d2264451-Reviews-Larkin_s_Bar-Kingston_upon_Hull_East_Riding_of_Yorkshire_England.html' %>
-            <%= link_to (image_tag 'shared/header/instagram-icon.svg', class: 'nav-social-media', alt: 'Instagram'), 'https://www.instagram.com/larkins_bar_hull/' %>
+            'https://www.tripadvisor.co.uk/Restaurant_Review-g186317-d2264451-Reviews-Larkin_s_Bar-Kingston_upon_Hull_East_Riding_of_Yorkshire_England.html', target: '_blank', rel:'noopener noreferrer' %>
+            <%= link_to (image_tag 'shared/header/instagram-icon.svg', class: 'nav-social-media', alt: 'Instagram'), 'https://www.instagram.com/larkins_bar_hull/', target: '_blank', rel:'noopener noreferrer' %>
 
           </li>
         </ul>

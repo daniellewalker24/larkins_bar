@@ -209,6 +209,9 @@
 
 .hero-banner-opening-times {
   color: $white;
+  background: image-url('shared/footer/clock-icon.svg') left no-repeat;
+  background-size: rem(14px);
+  padding-left: rem(30px);
   font-family:  $lato;
   text-align: center;
   position: absolute;

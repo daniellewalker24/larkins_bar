@@ -461,7 +461,7 @@ body {
 
 .events-content-block {
     @include flex-grid-column($columns: 6, $gutter: 0);
-    @include breakpoint (small only) {
+    @include breakpoint (medium down) {
          @include flex-grid-column(12);
     }
 }
@@ -603,4 +603,12 @@ body {
   @include breakpoint(medium) {
     height: calc(100% - 50px);
   }
+}
+
+.call-to-action-btn {
+  @include breakpoint(medium only) {
+  &.beers {
+    margin-bottom: rem(25px);
+  }
+}
 }
