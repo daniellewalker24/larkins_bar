@@ -74,6 +74,12 @@
 
 .lunch-menu-title-container {
     @include flex-grid-column(6);
+    padding: rem-calc(0) rem-calc(40px) rem-calc(30px);
+    @include breakpoint (medium down) {
+    @include flex-grid-column(12);
+    padding-left: 0;
+}
+
 }
 
 .lunch-menu-wrapper {
@@ -108,6 +114,7 @@
     letter-spacing: 3px;
     font-size: rem(12px);
     padding-left: rem(15px);
+
 }
 
 .lunch-special-wrapper {
@@ -237,6 +244,11 @@
     padding-bottom: 33px;
     padding-right: 150px;
     line-height: 33px;
+
+    @include breakpoint (medium only) {
+      padding-left: rem(20px);
+      padding-right: rem(20px);
+    }
   }
 
   .main-menu-coloured-block {
@@ -312,12 +324,15 @@
   font-family: $abril-fatface;
   text-align: left;
   letter-spacing: rem(4px);
+  width: 100%;
 }
 
 .burger-topping-title {
   color: $black;
   font-family: $lato;
   padding-bottom: rem(10px);
+  width: 100%;
+
 }
 
 .main-menu-toppings {
@@ -334,7 +349,7 @@
 
 .allergy-info {
   text-align: center;
-  font-size: $lato;
+  font-family: $lato;
   color: $black;
   padding: rem(30px);
   font-weight: 700;
@@ -354,4 +369,14 @@
   margin-left: auto;
   margin-right: auto;
   padding-top: rem(10px);
+}
+
+.sub-content-coloured-block-title {
+  color: $black;
+  font-family: $abril-fatface;
+  text-transform: uppercase;
+  font-size: rem-calc(24px);
+  letter-spacing: rem-calc(4px);
+  padding-top: rem(20px);
+  text-align: center;
 }

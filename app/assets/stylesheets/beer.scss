@@ -1,6 +1,4 @@
-.beer-menu-title-wrapper {
-    padding-left: rem(40px);
-}
+
 
 .sub-content-block-title {
     color: $white;
@@ -9,12 +7,15 @@
     font-size: rem-calc(24px);
     letter-spacing: rem-calc(4px);
     padding-top: rem(20px);
+    padding-left: rem(40px);
 
     &.centered {
         text-align: center;
         font-size: rem(36px);
+
         padding-bottom: rem(20px);
     }
+
 }
 
 .beer-opacity-title {

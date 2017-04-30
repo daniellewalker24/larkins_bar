@@ -218,4 +218,7 @@
   left: 50%;
   bottom: 100px;
   transform: translateX(-50%);
+  @include breakpoint (small only) {
+    display: none;
+  }
 }

@@ -496,8 +496,11 @@ body {
 }
 
 .event-content-padding {
-    @include breakpoint(medium up) {
+    @include breakpoint(large only) {
         padding-left: rem(40px);
+    }
+    @include breakpoint(medium down) {
+      margin-top: rem(25px);
     }
 }
 
@@ -548,7 +551,6 @@ body {
     transform: translateX(-50%);
     @include breakpoint (medium only) {
     bottom: 188px;
-    width: 400px;
     }
 
     @include breakpoint (small only) {

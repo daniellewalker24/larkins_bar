@@ -20,6 +20,14 @@ $(function() {
 
 $(document).on('click', '.smooth-scroll', function() {
   var elem = $.attr(this, 'href');
-  smoothScroll(elem);
-  return false;
+
+// http://stackoverflow.com/a/298525
+if(elem.indexOf("#") != -1) {
+  elem = elem.substr(elem.indexOf("#"))
+}
+
+if($(elem).length) {
+  smoothScroll(elem);
+  return false;
+}
 });
