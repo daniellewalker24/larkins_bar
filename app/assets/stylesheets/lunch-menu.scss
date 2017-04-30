@@ -382,3 +382,10 @@
   padding-top: rem(20px);
   text-align: center;
 }
+
+.desserts-wrapper {
+  @include breakpoint(1920px) {
+    padding-left: rem(70px);
+    padding-right: rem(70px);
+  }
+}
