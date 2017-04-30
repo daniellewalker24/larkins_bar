@@ -385,7 +385,7 @@
 
 .desserts-wrapper {
   @include breakpoint(1920px) {
-    padding-left: rem(70px);
-    padding-right: rem(70px);
+    padding-left: rem(120px);
+    padding-right: rem(120px);
   }
 }
