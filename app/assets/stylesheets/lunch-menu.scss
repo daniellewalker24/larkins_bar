@@ -69,7 +69,10 @@
 .lunch-menu-title-wrapper {
     @include customised-flex-grid-row;
     margin-left: 0;
-    padding-left: rem(20px);
+    padding-left: rem(65px);
+    @include breakpoint (medium down) {
+      padding-left: rem(60px);
+    }
 }
 
 .lunch-menu-title-container {
@@ -78,6 +81,7 @@
     @include breakpoint (medium down) {
     @include flex-grid-column(12);
     padding-left: 0;
+    padding-bottom: 0;
 }
 
 }
@@ -99,7 +103,6 @@
     padding-top: rem(10px);
     padding-bottom: rem(20px);
     font-size: rem(14px);
-    padding-left: rem(14px);
     padding-right: rem(9px);
 
     &.lunch-special {
@@ -113,7 +116,6 @@
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: rem(12px);
-    padding-left: rem(15px);
 
 }
 

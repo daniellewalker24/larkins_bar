@@ -614,3 +614,17 @@ body {
   }
 }
 }
+
+.scrollup {
+    width: 45px;
+    height: 45px;
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    display: none;
+    text-indent: -9999px;
+    background: url('arrow.png') no-repeat;
+    background-size: 40% 40%;
+    background-position: center;
+    background-color: $periwinkle-blue;
+}

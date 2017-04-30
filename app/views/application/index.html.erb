@@ -1,10 +1,26 @@
 
+<script>
+$(document).ready(function () {
 
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 500) {
+            $('.scrollup').fadeIn();
+        } else {
+            $('.scrollup').fadeOut();
+        }
+    });
+
+    function scrollTo(hash) {
+    location.hash = "#topbar" + hash;
+}
+
+});
+</script>
 <%= render partial: 'layouts/shared/hero', locals: { text: '<h1 class="hero-tagline hero-standard-text"> <span class="decorated-text">taste</span> our hearty menu<br /> and <span class="decorated-text">drink</span> our craft beers </h1>',
 button_text_1: 'View Menu', button_link_1: '/main-menu', button_text_2: 'Book Table', button_link_2: '#booking', additional_classes: 'hero-image' } %>
 
 <div class="main-content-blocks hero-content" id="anchor">
-  <div class="content-block">
+  <div class="content-block" id="topbar">
     <div class="content-block-sub-title">
       discover
     </div>
@@ -432,4 +448,5 @@ button_text_1: 'View Menu', button_link_1: '/main-menu', button_text_2: 'Book Ta
     Disabled access available, please feel welcome to call ahead if you’ll require assistance.
   </p>
 </div>
+<a href="#" class="smooth-scroll">Scroll</a>
 </div>
