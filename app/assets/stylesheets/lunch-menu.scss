@@ -23,6 +23,10 @@
     }
     &.burger-toppings {
       padding-bottom: rem(15px);
+      @include breakpoint (medium down) {
+        margin-top: rem(35px);
+      }
+
     }
 
     .sub-content-block-title {
@@ -326,7 +330,7 @@
   font-family: $abril-fatface;
   text-align: left;
   letter-spacing: rem(4px);
-  width: 100%;
+  display: inline-block;
 }
 
 .burger-topping-title {
