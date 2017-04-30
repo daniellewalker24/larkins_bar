@@ -27,33 +27,33 @@
     <div class="primary-nav-wrapper">
       <nav class="primary-navigation-wrap">
         <ul class="primary-navigation">
-      <!--    <% if current_page?(root_url) %>
+          <!--    <% if current_page?(root_url) %>
           <%= link_to 'About', '#anchor' , title: 'About', class: 'smooth-scroll' %>
         <% else %>
           <%= link_to 'About', 'http://demo.larkinsbar.co.uk/#anchor' , class:'smooth-scroll' %>
           <% end %> -->
 
           <li>
-            <%= link_to 'Home', root_url, title: 'Home' %>
+            <%= link_to 'Home', root_url, title:'Home', class:'smooth-scroll' %>
           </li>
           <li>
-<%= link_to 'About', root_url(anchor: 'anchor'), title:'About', class:'smooth-scroll' %>
+            <%= link_to 'About', root_url(anchor: 'anchor'), title:'About', class:'smooth-scroll' %>
 
           </li>
           <li>
-            <%= link_to 'Beers', '#beer' , title: 'Beers', class:'smooth-scroll' %>
+            <%= link_to 'Beers', root_url(anchor: 'beer'), title:'Beers', class:'smooth-scroll' %>
           </li>
           <li>
-            <%= link_to 'Booking', '#booking' , title: 'Booking', class:'smooth-scroll' %>
+            <%= link_to 'Booking', root_url(anchor: 'booking'), title:'Booking', class:'smooth-scroll' %>
           </li>
           <li>
-            <%= link_to 'Menu', '#menu' , title: 'Menu', class:'smooth-scroll' %>
+              <%= link_to 'Menu', root_url(anchor: 'menu'), title:'Menu', class:'smooth-scroll' %>
           </li>
           <li>
-            <%= link_to 'Whats on', '#events' , title: 'Whats on', class:'smooth-scroll' %>
+              <%= link_to 'Whats on', root_url(anchor: 'events'), title:'Whats on', class:'smooth-scroll' %>
           </li>
           <li>
-            <%= link_to 'Contact', '#contact' , title: 'Contact', class:'smooth-scroll' %>
+              <%= link_to 'Contact', root_url(anchor: 'contact'), title:'Contact', class:'smooth-scroll' %>
           </li>
         </ul>
         <ul class="primary-navigation-social-icons">
