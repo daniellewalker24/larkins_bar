@@ -7,13 +7,16 @@
     font-size: rem-calc(24px);
     letter-spacing: rem-calc(4px);
     padding-top: rem(20px);
-    padding-left: rem(40px);
 
     &.centered {
         text-align: center;
         font-size: rem(36px);
-
+        padding-left: 0;
         padding-bottom: rem(20px);
+    }
+
+    &.sides {
+      padding-left: rem(35px);
     }
 
 }
