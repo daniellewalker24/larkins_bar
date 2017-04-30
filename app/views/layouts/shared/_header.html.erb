@@ -24,47 +24,49 @@
         <span class="hamburger-inner"></span>
       </span>
     </button>
+    <div class="primary-nav-wrapper">
+      <nav class="primary-navigation-wrap">
+        <ul class="primary-navigation">
+      <!--    <% if current_page?(root_url) %>
+          <%= link_to 'About', '#anchor' , title: 'About', class: 'smooth-scroll' %>
+        <% else %>
+          <%= link_to 'About', 'http://demo.larkinsbar.co.uk/#anchor' , class:'smooth-scroll' %>
+          <% end %> -->
 
-<div class="primary-nav-wrapper">
-    <nav class="primary-navigation-wrap">
+          <li>
+            <%= link_to 'Home', root_url, title: 'Home' %>
+          </li>
+          <li>
 
-      <ul class="primary-navigation">
+            <%= link_to 'About', '#anchor' , title: 'About', class:'smooth-scroll' %>
+          </li>
+          <li>
+            <%= link_to 'Beers', '#beer' , title: 'Beers', class:'smooth-scroll' %>
+          </li>
+          <li>
+            <%= link_to 'Booking', '#booking' , title: 'Booking', class:'smooth-scroll' %>
+          </li>
+          <li>
+            <%= link_to 'Menu', '#menu' , title: 'Menu', class:'smooth-scroll' %>
+          </li>
+          <li>
+            <%= link_to 'Whats on', '#events' , title: 'Whats on', class:'smooth-scroll' %>
+          </li>
+          <li>
+            <%= link_to 'Contact', '#contact' , title: 'Contact', class:'smooth-scroll' %>
+          </li>
+        </ul>
+        <ul class="primary-navigation-social-icons">
+          <li>
+            <%= link_to (image_tag 'shared/header/facebook-icon.svg', class: 'nav-social-media', alt: 'Facebook'), 'https://www.facebook.com/LarkinsBar/' %>
+            <%= link_to (image_tag 'shared/header/twitter-icon.svg', class: 'nav-social-media', alt: 'Twitter'), 'https://twitter.com/larkinsbar' %>
+            <%= link_to (image_tag 'shared/header/tripadvisor-icon.svg', class: 'nav-social-media', alt: 'Tripadvisor'),
+            'https://www.tripadvisor.co.uk/Restaurant_Review-g186317-d2264451-Reviews-Larkin_s_Bar-Kingston_upon_Hull_East_Riding_of_Yorkshire_England.html' %>
+            <%= link_to (image_tag 'shared/header/instagram-icon.svg', class: 'nav-social-media', alt: 'Instagram'), 'https://www.instagram.com/larkins_bar_hull/' %>
 
-        <li>
-          <%= link_to 'Home', root_url, title: 'Home' %>
-        </li>
-
-        <li>
-          <%= link_to 'About', 'http://demo.larkinsbar.co.uk/#anchor' , title: 'About', class:'smooth-scroll' %>
-
-        </li>
-        <li>
-          <%= link_to 'Beers', '#beer' , title: 'Beers', class:'smooth-scroll' %>
-        </li>
-        <li>
-          <%= link_to 'Booking', '#booking' , title: 'Booking', class:'smooth-scroll' %>
-        </li>
-        <li>
-          <%= link_to 'Menu', '#menu' , title: 'Menu', class:'smooth-scroll' %>
-        </li>
-        <li>
-          <%= link_to 'Whats on', '#events' , title: 'Whats on', class:'smooth-scroll' %>
-        </li>
-        <li>
-          <%= link_to 'Contact', '#contact' , title: 'Contact', class:'smooth-scroll' %>
-        </li>
-      </ul>
-      <ul class="primary-navigation-social-icons">
-        <li>
-          <%= link_to (image_tag 'shared/header/facebook-icon.svg', class: 'nav-social-media', alt: 'Facebook'), 'https://www.facebook.com/LarkinsBar/' %>
-          <%= link_to (image_tag 'shared/header/twitter-icon.svg', class: 'nav-social-media', alt: 'Twitter'), 'https://twitter.com/larkinsbar' %>
-          <%= link_to (image_tag 'shared/header/tripadvisor-icon.svg', class: 'nav-social-media', alt: 'Tripadvisor'),
-          'https://www.tripadvisor.co.uk/Restaurant_Review-g186317-d2264451-Reviews-Larkin_s_Bar-Kingston_upon_Hull_East_Riding_of_Yorkshire_England.html' %>
-          <%= link_to (image_tag 'shared/header/instagram-icon.svg', class: 'nav-social-media', alt: 'Instagram'), 'https://www.instagram.com/larkins_bar_hull/' %>
-
-        </li>
-      </ul>
-    </nav>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
-</div>
 </header>

@@ -25,11 +25,11 @@ body {
         background-image: image-url('home/hero-image.jpg');
     }
     &.beer-hero-image {
-      background-image: image-url('beer/beer-hero-image.png')
+      background-image: image-url('beer/hero-image-2.png')
     }
 
-    &.another-image {
-        background-image: url('http://placehold.it/1920x800');
+    &.lunch-menu-hero-image {
+        background-image: image-url('lunch-menu/hero-image.png')
     }
 
     .call-to-action-btn,
@@ -43,6 +43,7 @@ body {
     background-size: cover;
     min-height: 600px;
     position: relative;
+
     @media screen and (min-width: 768px) {
         margin-top: $overlap;
     }
@@ -53,8 +54,27 @@ body {
     @include breakpoint(1025px) {
       background-attachment: fixed;
     }
+
 }
 
+.beer-second-image-wrapper {
+    background: image-url('beer/banner-image-1.png') center bottom no-repeat;
+    background-size: cover;
+    min-height: 600px;
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+        margin-top: $overlap;
+    }
+    @include breakpoint(small only) {
+        display: none;
+    }
+
+    @include breakpoint(1025px) {
+      background-attachment: fixed;
+    }
+
+}
 .hero-tagline {
     color: white;
     font-family: $lato;
@@ -111,6 +131,14 @@ body {
     @include breakpoint (small only) {
         padding-top: rem(40px);
     }
+
+    &.first-underlay {
+        @include content-block-background( 'home/graphic-underlay-4.png', 100%, 50%);
+      }
+
+      &.second-underlay {
+        @include content-block-background( 'home/graphic-underlay-5.png', 100%, 50%);
+      }
     @include breakpoint (medium) {
       padding-top: rem(60px);
       padding-bottom: rem(40px);

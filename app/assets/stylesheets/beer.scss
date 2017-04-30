@@ -47,6 +47,13 @@
         }
     }
 
+&.wine-list-underlay {
+  @include content-block-background( 'wine-list/wine-underlay-1.png', 100%, 20%);
+}
+
+&.wine-list-underlay-2 {
+  @include content-block-background( 'wine-list/wine-underlay-2.png', 100%, 40%);
+}
     &.second-underlay {
         @include content-block-background( 'beer/beer-underlay-2.png', 100%, 40%);
     }
