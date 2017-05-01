@@ -3,6 +3,7 @@
 <div></div>
 <div class="main-content-blocks menu-beer-content first-underlay">
   <div class="beer-full-menu-content-block">
+    <div class="outer-menu-content-wrapper">
     <div class="beer-menu-title-content-wrapper">
       <div class="beer-opacity-title">
         Our Beers
@@ -10,19 +11,23 @@
       <div class="content-block-sub-title beers-title">
         discover
       </div>
+
       <h2 class="content-block-title beers-title">
         Larkin's Favourites
       </h2>
     </div>
-    <div class="beer-menu-title-wrapper">
-      <h2 class="sub-content-block-title">
+    <div class="outer-menu-content-wrapper">
+    <div class="beer-menu-title-content-wrapper">
+      <h2 class="sub-content-block-title beers">
         Ale Beers
       </h2>
     </div>
-    <%= raw @ale_beers.content %>
 
+    <%= raw @ale_beers.content %>
   </div>
 </div>
+</div>
+  </div>
 <div class="beer-second-image-wrapper">
   <div class="hero-tagline">
     <div class="hero-tagline-wrapper">
@@ -36,11 +41,8 @@
 <div class="main-content-blocks menu-beer-content second-underlay">
   <div class="beer-full-menu-content-block">
     <div class="beer-menu-title-content-wrapper">
-      <div class="content-block-sub-title beers-title">
-        discover
-      </div>
-      <h2 class="content-block-title beers-title">
-        Our Lager Beers
+      <h2 class="sub-content-block-title beers">
+        Our Larkin's Largers
       </h2>
     </div>
     <%= raw @lager_beers.content %>
@@ -91,11 +93,8 @@
 <div class="main-content-blocks menu-beer-content third-underlay">
   <div class="beer-full-menu-content-block">
     <div class="beer-menu-title-content-wrapper">
-      <div class="content-block-sub-title beers-title">
-        discover
-      </div>
-      <h2 class="content-block-title beers-title">
-        Our Fruit Beers
+      <h2 class="sub-content-block-title beers">
+      Our Fruit Beers
       </h2>
     </div>
     <%= raw @fruit_beers.content %>

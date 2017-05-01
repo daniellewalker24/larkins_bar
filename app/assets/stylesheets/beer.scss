@@ -4,8 +4,8 @@
     color: $white;
     font-family: $abril-fatface;
     text-transform: uppercase;
-    font-size: rem-calc(24px);
-    letter-spacing: rem-calc(4px);
+    font-size: rem(24px);
+    letter-spacing: rem(4px);
     padding-top: rem(20px);
 
     &.centered {
@@ -17,6 +17,10 @@
 
     &.sides {
       padding-left: rem(35px);
+    }
+    &.beers {
+      font-size: rem(30px);
+      padding-top: 0;
     }
 
 }

@@ -496,7 +496,7 @@ body {
 
 .text-content-alignment {
     @include breakpoint(large) {
-        padding: rem-calc(160px) rem-calc(40px) rem-calc(0px);
+        padding: rem-calc(130px) rem-calc(40px) rem-calc(0px);
     }
     @include breakpoint(medium down) {
         padding-top: rem(130px);
@@ -511,6 +511,9 @@ body {
     }
     @include breakpoint(medium down) {
         margin-top: rem(25px);
+    }
+    @include breakpoint (medium only) {
+      text-align: center;
     }
 }
 
@@ -558,6 +561,8 @@ body {
     transform: translateX(-50%);
     @include breakpoint (medium only) {
         bottom: 188px;
+        width: 100%;
+        text-align: center;
     }
     @include breakpoint (small only) {
         bottom: 112px;
