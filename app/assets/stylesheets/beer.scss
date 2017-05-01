@@ -146,3 +146,10 @@
 .beer-menu-title-content-wrapper {
   padding-left: rem(35px);
 }
+
+.beer-outer-menu-content-wrapper {
+    @include breakpoint (small only) {
+        border-bottom: 1px solid $periwinkle-blue;
+        padding-bottom: rem(13px);
+    }
+}
