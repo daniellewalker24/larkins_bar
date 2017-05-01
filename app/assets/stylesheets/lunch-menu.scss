@@ -5,13 +5,16 @@
     @include breakpoint(medium down) {
          @include flex-grid-column($columns: 12, $gutter: 0);
     }
+    @include breakpoint (small only) {
+        padding: 0;
+    }
 }
 
 .coloured-block {
     background: image-url('beer/beer-underlay-1.png') 100% 20%, $periwinkle-blue;
     background-repeat: no-repeat;
     padding-top: rem(30px);
-    padding-bottom: rem(30px);
+    padding-bottom: rem(60px);
     margin-bottom: 20px;
 
     &.main-menu {
@@ -21,12 +24,18 @@
         margin-left: rem(80px);
         margin-right: rem(80px);
     }
-    &.burger-toppings {
-      padding-bottom: rem(15px);
-      @include breakpoint (medium down) {
-        margin-top: rem(35px);
-      }
 
+    &.burger-toppings {
+        padding-bottom: rem(15px);
+        @include breakpoint (medium only) {
+            margin-top: rem(20px);
+
+        }
+        @include breakpoint (small only) {
+padding-bottom: rem(60px);
+margin: 0;
+
+        }
     }
 
     .sub-content-block-title {
@@ -61,6 +70,9 @@
     .menu-item-title-intro {
         color: $black;
     }
+    @include breakpoint (small only) {
+        margin: rem(20px);
+    }
 }
 
 .lunch-menu-content {
@@ -75,7 +87,7 @@
     margin-left: 0;
     padding-left: rem(65px);
     @include breakpoint (medium down) {
-      padding-left: rem(60px);
+        padding-left: rem(60px);
     }
 }
 
@@ -83,11 +95,10 @@
     @include flex-grid-column(6);
     padding: rem-calc(0) rem-calc(40px) rem-calc(30px);
     @include breakpoint (medium down) {
-    @include flex-grid-column(12);
-    padding-left: 0;
-    padding-bottom: 0;
-}
-
+         @include flex-grid-column(12);
+        padding-left: 0;
+        padding-bottom: 0;
+    }
 }
 
 .lunch-menu-wrapper {
@@ -100,8 +111,8 @@
     padding-right: rem(40px);
 
     &.lunch-menu {
-      padding-left: rem(40px);
-      padding-bottom: rem(10px);
+        padding-left: rem(40px);
+        padding-bottom: rem(10px);
     }
 }
 
@@ -125,7 +136,6 @@
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: rem(12px);
-
 }
 
 .lunch-special-wrapper {
@@ -228,6 +238,9 @@
     @include breakpoint(medium down) {
          @include flex-grid-column($columns: 12, $gutter: 0);
     }
+    @include breakpoint (small only) {
+        padding: 0;
+    }
 }
 
 .main-menu-info-container {
@@ -254,150 +267,149 @@
     padding-bottom: 33px;
     padding-right: 150px;
     line-height: 33px;
-
     @include breakpoint (medium only) {
-      padding-left: rem(20px);
-      padding-right: rem(20px);
+        padding-left: rem(20px);
+        padding-right: rem(20px);
     }
-
     @include breakpoint (small only) {
-      @include flex-grid-column(12);
+         @include flex-grid-column(12);
     }
-  }
+}
 
-  .main-menu-coloured-block {
+.main-menu-coloured-block {
     @include flex-grid-column($columns: 6, $gutter: 0);
     padding: rem-calc(0) rem-calc(40px) rem-calc(30px);
     @include breakpoint(medium down) {
          @include flex-grid-column($columns: 12, $gutter: 0);
     }
-  }
+}
 
-  .main-menu-info-wrapper {
+.main-menu-info-wrapper {
     @include flex-grid-row;
     padding-left: rem(30px);
-  }
+}
 
-  .main-menu-toppings {
+.main-menu-toppings {
     @include flex-grid-column($columns: 6, $gutter: 0);
     @include breakpoint(medium down) {
          @include flex-grid-column($columns: 12, $gutter: 0);
     }
-  }
+}
 
 .side-menu-title-wrapper {
-  padding-left: rem(40px);
-  padding-top: rem(60px);
+    padding-left: rem(40px);
+    padding-top: rem(60px);
 }
 
 .larkins-banner-title {
-  font-family: $abril-fatface;
-  color: $white;
-  font-size: rem(30px);
-  letter-spacing: rem(5px);
-  text-transform: uppercase;
-  &.desserts {
-    padding-bottom: rem(10px);
-  }
+    font-family: $abril-fatface;
+    color: $white;
+    font-size: rem(30px);
+    letter-spacing: rem(5px);
+    text-transform: uppercase;
+
+    &.desserts {
+        padding-bottom: rem(10px);
+    }
 }
 
 .larkins-coffe-sub-title {
-  color: $white;
-  font-family: $lato;
-  font-size: rem(20px);
-  font-weight: 700;
-  letter-spacing: rem(5px);
+    color: $white;
+    font-family: $lato;
+    font-size: rem(20px);
+    font-weight: 700;
+    letter-spacing: rem(5px);
 }
 
 .larkins-banner-sub-title {
-  font-family: $lato;
-  color: $white;
-  letter-spacing: rem(5px);
-  text-transform: uppercase;
+    font-family: $lato;
+    color: $white;
+    letter-spacing: rem(5px);
+    text-transform: uppercase;
 }
 
 .kids-eat-free-info {
-  color: $white;
-  font-family: $lato;
-  letter-spacing: rem(2px);
-  font-size: rem(14px);
-  padding-bottom: rem(20px);
+    color: $white;
+    font-family: $lato;
+    letter-spacing: rem(2px);
+    font-size: rem(14px);
+    padding-bottom: rem(20px);
 }
 
 .kids-eat-free-wrapper {
-  @include flex-grid-row;
+    @include flex-grid-row;
 }
 
 .kids-eat-free-content {
-  @include flex-grid-column(6);
+    @include flex-grid-column(6);
 }
 
 .kids-eat-free-content-wrapper {
-  list-style: none;
-  margin-left: 0;
-  font-family: $abril-fatface;
-  text-align: left;
-  letter-spacing: rem(4px);
-  display: inline-block;
+    list-style: none;
+    margin-left: 0;
+    font-family: $abril-fatface;
+    text-align: left;
+    letter-spacing: rem(4px);
+    display: inline-block;
 }
 
 .burger-topping-title {
-  color: $black;
-  font-family: $lato;
-  padding-bottom: rem(10px);
-  width: 100%;
-
+    color: $black;
+    font-family: $lato;
+    padding-bottom: rem(10px);
+    width: 100%;
 }
 
 .main-menu-toppings {
-  list-style: none;
+    list-style: none;
 }
+
 .toppings-wrapper {
-  list-style: none;
-  margin-left: 0;
-  font-family: $abril-fatface;
-  text-transform: uppercase;
-  letter-spacing: rem(2px);
-  font-size: rem(14px);
+    list-style: none;
+    margin-left: 0;
+    font-family: $abril-fatface;
+    text-transform: uppercase;
+    letter-spacing: rem(2px);
+    font-size: rem(14px);
 }
 
 .allergy-info {
-  text-align: center;
-  font-family: $lato;
-  color: $black;
-  padding: rem(30px);
-  font-weight: 700;
-  letter-spacing: rem(2px);
-  font-size: rem(12px);
+    text-align: center;
+    font-family: $lato;
+    color: $black;
+    padding: rem(30px);
+    font-weight: 700;
+    letter-spacing: rem(2px);
+    font-size: rem(12px);
 }
 
 .food-filter-title {
-  color: $white;
-  font-family: $lato;
-  text-transform: uppercase;
-  letter-spacing: rem(2px);
-  font-weight: 700;
+    color: $white;
+    font-family: $lato;
+    text-transform: uppercase;
+    letter-spacing: rem(2px);
+    font-weight: 700;
 }
 
 .filter-wrapper {
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: rem(10px);
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: rem(10px);
 }
 
 .sub-content-coloured-block-title {
-  color: $black;
-  font-family: $abril-fatface;
-  text-transform: uppercase;
-  font-size: rem-calc(24px);
-  letter-spacing: rem-calc(4px);
-  padding-top: rem(20px);
-  text-align: center;
+    color: $black;
+    font-family: $abril-fatface;
+    text-transform: uppercase;
+    font-size: rem-calc(24px);
+    letter-spacing: rem-calc(4px);
+    padding-top: rem(20px);
+    text-align: center;
 }
 
 .desserts-wrapper {
-  @include breakpoint(1920px) {
-    padding-left: rem(120px);
-    padding-right: rem(120px);
-  }
+    @include breakpoint(1920px) {
+        padding-left: rem(120px);
+        padding-right: rem(120px);
+    }
 }

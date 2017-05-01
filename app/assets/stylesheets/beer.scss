@@ -119,8 +119,8 @@
     margin-left: auto;
     width: 330px;
     padding-left: rem(47px);
-    @include breakpoint (small only) {
-        padding-left: 0;
+    @include breakpoint (medium down) {
+      display: none;
     }
 }
 
@@ -134,8 +134,8 @@
     margin-left: auto;
     width: 330px;
     padding-left: rem(90px);
-    @include breakpoint (small only) {
-        padding-left: 0;
+    @include breakpoint (medium down) {
+      display: none;
     }
 }
 
