@@ -17,6 +17,10 @@
     padding-bottom: rem(60px);
     margin-bottom: 20px;
 
+    &.allergy-block {
+      padding: 0;
+    }
+
     &.main-menu {
         color: $white;
         background: none;
@@ -92,8 +96,8 @@ margin: 0;
 }
 
 .lunch-menu-title-container {
-    @include flex-grid-column(6);
-    padding: rem-calc(0) rem-calc(40px) rem-calc(30px);
+    @include flex-grid-column(12);
+    padding: rem-calc(0) rem-calc(40px);
     @include breakpoint (medium down) {
          @include flex-grid-column(12);
         padding-left: 0;
@@ -412,4 +416,9 @@ margin: 0;
         padding-left: rem(120px);
         padding-right: rem(120px);
     }
+}
+
+.lunch-special-wrapper-content {
+  padding-left: rem(30px);
+  padding-right: rem(30px);
 }
