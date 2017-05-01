@@ -1,7 +1,5 @@
 body {
     background: image-url('bg-texture.png');
-
-
 }
 
 .hero-image-container {
@@ -24,17 +22,18 @@ body {
     &.hero-image {
         background-image: image-url('home/hero-image.jpg');
     }
+
     &.beer-hero-image {
-      background-image: image-url('beer/hero-image-2.png')
+        background-image: image-url('beer/hero-image-2.png');
     }
 
     &.lunch-menu-hero-image {
-        background-image: image-url('lunch-menu/hero-image.png')
+        background-image: image-url('lunch-menu/hero-image.png');
     }
 
     .call-to-action-btn,
     .secondary-submit-button {
-    //  width: 160px;
+        //  width: 160px;
     }
 }
 
@@ -43,18 +42,15 @@ body {
     background-size: cover;
     min-height: 600px;
     position: relative;
-
     @media screen and (min-width: 768px) {
         margin-top: $overlap;
     }
     @include breakpoint(small only) {
         display: none;
     }
-
     @include breakpoint(1025px) {
-      background-attachment: fixed;
+        background-attachment: fixed;
     }
-
 }
 
 .beer-second-image-wrapper {
@@ -62,19 +58,17 @@ body {
     background-size: cover;
     min-height: 600px;
     position: relative;
-
     @media screen and (min-width: 768px) {
         margin-top: $overlap;
     }
     @include breakpoint(small only) {
         display: none;
     }
-
     @include breakpoint(1025px) {
-      background-attachment: fixed;
+        background-attachment: fixed;
     }
-
 }
+
 .hero-tagline {
     color: white;
     font-family: $lato;
@@ -85,7 +79,7 @@ body {
     transform: translate(-50%, -50%);
     top: calc(50% - 50px);
     @include breakpoint (small only) {
-      top: calc(85% - 50%);
+        top: calc(85% - 50%);
     }
 }
 
@@ -98,7 +92,7 @@ body {
     font-weight: 500;
     letter-spacing: normal;
     @include breakpoint (small only) {
-      font-size: rem(60px);
+        font-size: rem(60px);
     }
 }
 
@@ -110,15 +104,15 @@ body {
     letter-spacing: rem(5px);
     padding-left: rem(13px);
     @include breakpoint (medium only) {
-      font-size: rem(39px);
-      width: 100%;
+        font-size: rem(39px);
+        width: 100%;
     }
     @include breakpoint (small only) {
-      font-size: rem(27px);
-      width: rem(300px);
-      font-weight: 600;
-      font-family: $montserrat;
-      letter-spacing: rem(2px);
+        font-size: rem(27px);
+        width: rem(300px);
+        font-weight: 600;
+        font-family: $montserrat;
+        letter-spacing: rem(2px);
     }
 }
 
@@ -134,14 +128,14 @@ body {
 
     &.first-underlay {
         @include content-block-background( 'home/graphic-underlay-4.png', 100%, 50%);
-      }
+    }
 
-      &.second-underlay {
+    &.second-underlay {
         @include content-block-background( 'home/graphic-underlay-5.png', 100%, 50%);
-      }
+    }
     @include breakpoint (medium) {
-      padding-top: rem(60px);
-      padding-bottom: rem(40px);
+        padding-top: rem(60px);
+        padding-bottom: rem(40px);
     }
 }
 
@@ -151,9 +145,9 @@ body {
     position: relative;
     z-index: 6;
     //&.menu-beer-content {
-  //    @include content-block-background( 'beer/beer-underlay-1.png', 100%, 40%);
-  //  }
-  //  &.menu-beer-content-1 {
+    //    @include content-block-background( 'beer/beer-underlay-1.png', 100%, 40%);
+    //  }
+    //  &.menu-beer-content-1 {
     //  @include content-block-background( 'beer/beer-underlay-2.png', 100%, 40%);
     //}
     @include breakpoint(medium only) {
@@ -169,7 +163,7 @@ body {
     }
     @include breakpoint(medium) {
          @include flex-grid-column($columns: 6, $gutter: 0);
-         padding-bottom: rem(30px);
+        padding-bottom: rem(30px);
     }
 }
 
@@ -216,8 +210,9 @@ body {
     line-height: 0.3;
     font-family: $alex-brush;
     font-size: rem-calc(50px);
+
     &.beers-title {
-      position: relative;
+        position: relative;
     }
 }
 
@@ -229,7 +224,7 @@ body {
     letter-spacing: rem-calc(5px);
 
     &.beers-title {
-      position: relative;
+        position: relative;
     }
 }
 
@@ -261,27 +256,29 @@ body {
     }
 
     &.time-icon {
-      background: image-url('home/clock-icon.svg');
-      background-repeat: no-repeat;
-      padding-left: rem(50px);
-      background-size: 20px;
-      background-position-y: rem(2px);
+        background: image-url('home/clock-icon.svg');
+        background-repeat: no-repeat;
+        padding-left: rem(50px);
+        background-size: 20px;
+        background-position-y: rem(2px);
     }
+
     &.food-icon {
-      background: image-url('home/food-icon.svg');
-      background-repeat: no-repeat;
-      padding-left: rem(50px);
-      background-size: 20px;
-      background-position-y: rem(2px);
+        background: image-url('home/food-icon.svg');
+        background-repeat: no-repeat;
+        padding-left: rem(50px);
+        background-size: 20px;
+        background-position-y: rem(2px);
     }
 
     &.without-icon {
-      padding-left: rem(50px);
-      line-height: rem(17px);
+        padding-left: rem(50px);
+        line-height: rem(17px);
     }
+
     a {
-      text-decoration: none;
-      color: $white;
+        text-decoration: none;
+        color: $white;
     }
 }
 
@@ -313,8 +310,8 @@ body {
     @include content-block-background( 'home/graphic-underlay-2.png', 100%, 67%);
     //background: image-url('home/graphic-underlay-1.png') center bottom no-repeat, $teal-blue;
     @include breakpoint(medium only) {
-      padding-left: rem-calc(35px);
-      padding-right: rem-calc(35px);
+        padding-left: rem-calc(35px);
+        padding-right: rem-calc(35px);
     }
     padding-left: rem-calc(45px);
     padding-right: rem-calc(45px);
@@ -324,15 +321,19 @@ body {
 .call-to-action-btn {
     @include primary-submit-button;
     @include breakpoint (small only) {
-      margin-bottom: rem(25px);
-      text-align: center;
+        margin-bottom: rem(25px);
+        text-align: center;
+
+        &.beers {
+            margin-bottom: rem(50px);
+        }
     }
 }
 
-.secondary-submit-button{
+.secondary-submit-button {
     @include secondary-submit-button;
     @include breakpoint (small only) {
-      margin-bottom: rem(25px);
+        margin-bottom: rem(25px);
     }
 }
 
@@ -366,7 +367,7 @@ body {
         line-height: rem(40px);
     }
     @include breakpoint(medium only) {
-      line-height: 1.1;
+        line-height: 1.1;
     }
 }
 
@@ -451,7 +452,6 @@ body {
     @include breakpoint(medium down) {
          @include flex-grid-column($columns: 12, $gutter: 0);
     }
-
 }
 
 .button-container-wrapper {
@@ -464,11 +464,21 @@ body {
     @include breakpoint (medium down) {
          @include flex-grid-column(12);
     }
+    @include breakpoint (medium only) {
+        padding-left: 0;
+    }
 }
 
 .whats-on-content {
     color: $white;
     line-height: rem(30px);
+    padding-right: rem(30px);
+    @include breakpoint (small only) {
+        padding-right: 0;
+    }
+    @include breakpoint (medium only) {
+        padding-right: 0;
+    }
 }
 
 .events-title-wrapper {
@@ -500,22 +510,19 @@ body {
         padding-left: rem(40px);
     }
     @include breakpoint(medium down) {
-      margin-top: rem(25px);
+        margin-top: rem(25px);
     }
 }
 
 .third-image-wrapper {
-
     background: image-url('home/home-events-hero.png') center bottom no-repeat;
     background-size: cover;
     position: relative;
-
     @media screen and (min-width: 768px) {
         margin-top: $overlap;
     }
-
     @include breakpoint(1025px) {
-      background-attachment: fixed;
+        background-attachment: fixed;
     }
 }
 
@@ -523,7 +530,7 @@ body {
     @include full-menu-content-block;
     padding: rem-calc(50px) rem-calc(40px) rem-calc(0px);
     @include breakpoint(small only) {
-      @include flex-grid-column($columns: 12, $gutter: 0);
+         @include flex-grid-column($columns: 12, $gutter: 0);
     }
     @include breakpoint(medium) {
          @include flex-grid-column($columns: 6, $gutter: 0);
@@ -550,19 +557,18 @@ body {
     bottom: 200px;
     transform: translateX(-50%);
     @include breakpoint (medium only) {
-    bottom: 188px;
+        bottom: 188px;
     }
-
     @include breakpoint (small only) {
-      bottom: 112px;
-      text-align: center;
+        bottom: 112px;
+        text-align: center;
     }
 }
 
 .beer-content-wrapper {
-  @include breakpoint(1025px) {
-    padding-bottom: rem(40px);
-  }
+    @include breakpoint(1025px) {
+        padding-bottom: rem(40px);
+    }
 }
 
 .menu-wrapper {
@@ -598,21 +604,21 @@ body {
 }
 
 #map {
-  height: 100%;
-  @include breakpoint(small only) {
-    min-height: 330px;
-  }
-  @include breakpoint(medium) {
-    height: calc(100% - 50px);
-  }
+    height: 100%;
+    @include breakpoint(small only) {
+        min-height: 330px;
+    }
+    @include breakpoint(medium) {
+        height: calc(100% - 50px);
+    }
 }
 
 .call-to-action-btn {
-  @include breakpoint(medium only) {
-  &.beers {
-    margin-bottom: rem(25px);
-  }
-}
+    @include breakpoint(medium only) {
+        &.beers {
+            margin-bottom: rem(25px);
+        }
+    }
 }
 
 .scrollup {
@@ -627,4 +633,11 @@ body {
     background-size: 40% 40%;
     background-position: center;
     background-color: $periwinkle-blue;
+}
+
+.outer-menu-content-wrapper {
+    @include breakpoint (small only) {
+        border-bottom: 1px solid $periwinkle-blue;
+        padding-bottom: rem(13px);
+    }
 }
