@@ -1,16 +1,15 @@
 @import 'vendor/foundation/foundation', 'lib/variables', 'lib/mixins', 'vendor/hamburgers';
 
 #tinymce {
+    .menu-item-price,
+    .menu-item-title {
+        @include flex-grid-column($columns: 12, $gutter: (small: 0));
+        text-align: left;
+    }
 
-  .menu-item-title,
-  .menu-item-price {
-      @include flex-grid-column($columns: 12, $gutter: (small: 0));
-      text-align: left;
-  }
-
-  .menu-item-price-padding {
-    padding-left: 0;
-  }
+    .menu-item-price-padding {
+        padding-left: 0;
+    }
 }
 
 body {
@@ -85,13 +84,17 @@ body {
     letter-spacing: rem(5px);
 }
 // beers
+
 .beer-menu-content-block {
     @include flex-grid-column($columns: 12, $gutter: 0);
 }
 
 .beer-menu-content-wrapper {
     @include flex-grid-row;
-}
+    @include breakpoint (small only) {
+        padding-bottom: rem(20px);
+    }
+} 
 
 .beer-menu-content-container {
     @include flex-grid-column($columns: 4, $gutter: 0);
@@ -106,8 +109,6 @@ body {
     font-family: $abril-fatface;
 }
 
-
-
 .wine-menu-content-container {
     @include flex-grid-column($columns: 6, $gutter: 0);
     padding: rem-calc(0) rem-calc(40px);
@@ -115,7 +116,6 @@ body {
          @include flex-grid-column($columns: 12, $gutter: 0);
     }
 }
-
 
 .wine-menu-item-title {
     @include flex-grid-column($columns: 12, $gutter: (small: 0));
@@ -128,30 +128,26 @@ body {
     padding-top: rem(20px);
 }
 
-
 .lunch-menu-content-container {
     @include flex-grid-column($columns: 12, $gutter: (small: 0));
     padding: rem-calc(0) rem-calc(40px);
-
     @include breakpoint(medium down) {
          @include flex-grid-column($columns: 12, $gutter: 0);
     }
 
     &.full-width {
-      padding: 0;
+        padding: 0;
     }
-
 }
 
 .main-menu-content-container {
     @include flex-grid-column($columns: 6, $gutter: (small: 0));
     padding: rem-calc(0) rem-calc(40px);
-
     @include breakpoint(medium down) {
          @include flex-grid-column($columns: 12, $gutter: 0);
     }
 }
 
 .filter-icon {
-  margin-right: rem(5px);
+    margin-right: rem(5px);
 }
