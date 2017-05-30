@@ -11,7 +11,7 @@
     cursor: pointer;
 
     &:hover {
-      color: red;
+      color: $moonlight-purple;
     }
   }
 
@@ -19,7 +19,7 @@
 
 .navigation-container {
   @include flex-grid-column(12);
-  background: $ghost-grey;
+  background: $light-purple;
   text-align: center;
   padding: 20px;
 
@@ -49,7 +49,7 @@
 .welcome-user-wrapper {
   @include flex-grid-row;
   max-width: none;
-  background-image: linear-gradient(to right, $cinderella-blue 0%, $neon-blue 100%);
+  background-color: $moonlight-purple;
 }
 
 .welcome-user-container {
@@ -86,7 +86,7 @@
 }
 
 .user-icon {
-background: red;
+background: $light-purple;
 border-radius: 70%;
 width: 20px;
 height: 20px;

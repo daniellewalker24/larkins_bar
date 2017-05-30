@@ -60,7 +60,9 @@ body {
 }
 
 .menu-item-price-padding {
+  @include breakpoint(medium) {
     padding-left: rem(7px);
+  }
 }
 
 .menu-item-description {
@@ -94,7 +96,7 @@ body {
     @include breakpoint (small only) {
         padding-bottom: rem(20px);
     }
-} 
+}
 
 .beer-menu-content-container {
     @include flex-grid-column($columns: 4, $gutter: 0);

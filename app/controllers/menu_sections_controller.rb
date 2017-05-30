@@ -14,7 +14,7 @@ end
 
 def craft_beers
   @menu_sections = MenuSection.all
-  @bricknell_brewery = @menu_sections.find_by(area: "Bricknell Brewery")
+  @bricknell_brewe ry = @menu_sections.find_by(area: "Bricknell Brewery")
   @bad_seed = @menu_sections.find_by(area: "Bad Seed")
   @magic_rock = @menu_sections.find_by(area: "Magic Rock")
 end

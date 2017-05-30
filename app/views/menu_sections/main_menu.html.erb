@@ -1,5 +1,5 @@
-<%= render partial: 'layouts/shared/hero', locals: { text: '<h1 class="hero-tagline hero-standard-text"> taste our <span class="decorated-text">hearty</span> menu at </br> larkins bar & restaurant </h1>', button_text_1: 'View Lunch Menu', button_link_1:
-'/lunch-menu', additional_classes: 'lunch-menu-hero-image' } %>
+<%= render partial: 'layouts/shared/hero', locals: { text: '<h1 class="hero-tagline hero-standard-text"> taste our <span class="decorated-text">hearty</span> menu at </br> larkins bar & restaurant </h1>', button_text_1: 'View Lunch Menu',
+button_link_1: '/lunch-menu', additional_classes: 'lunch-menu-hero-image' } %>
 <div class="main-content-blocks menu-beer-content">
   <div class="main-menu-info-container">
     <div class="coloured-block main-menu">
@@ -40,7 +40,7 @@
   <div class="lunch-menu-wrapper">
     <div class="lunch-full-menu-content-block">
       <div class="beer-menu-title-wrapper">
-        <h2 class="sub-content-block-title sides">
+        <h2 class="sub-content-block-title sides menu-item-container deal">
           Pasta
         </h2>
       </div>
@@ -72,7 +72,11 @@
   <h2 class="sub-content-block-title centered">
     Larkin's Famous Burgers
   </h2>
-  <div class="menu-item-content-info"><p>All of our burgers are made from locally sourced meat, blended with our signature seasoning, formed and pressed on site and served in a bun with salad, homemade coleslaw and french fries. </p><p>All of the meat used in our burgers are Gluten Free.</p></div>
+  <div class="menu-item-content-info">
+    <p>All of our burgers are made from locally sourced meat, blended with our signature seasoning, formed and pressed on site and served in a bun with salad, homemade coleslaw and french fries.
+    </p>
+    <p>All of the meat used in our burgers are Gluten Free.</p>
+  </div>
   <%= raw @larkins_burgers.content %>
   <div class="main-menu-coloured-block">
     <div class="coloured-block burger-toppings">
@@ -159,10 +163,10 @@
 <div class="hero-tagline">
   <div class="hero-tagline-wrapper">
     <div class="desserts-wrapper">
-    <div class="larkins-banner-title desserts">DESSERTS ALL £3.95</div>
-    <div class="kids-eat-free-info">WITH A CHOICE OF WHIPPED CREAM, ICE-CREAM OR POURING CREAM! Please ask a member of staff for desserts of the day.</div>
+      <div class="larkins-banner-title desserts">DESSERTS ALL £3.95</div>
+      <div class="kids-eat-free-info">WITH A CHOICE OF WHIPPED CREAM, ICE-CREAM OR POURING CREAM! Please ask a member of staff for desserts of the day.</div>
+    </div>
   </div>
-</div>
 </div>
 </div>
 </div>
@@ -178,24 +182,20 @@
 <div class="second-image-wrapper">
 <div class="hero-tagline">
 <div class="hero-tagline-wrapper">
-    <div class="desserts-wrapper">
-  <div class="larkins-banner-title desserts">ALLERGIES INTOLERANCES</div>
-  <div class="kids-eat-free-info">If you have any allergies please inform a member of staff so we can help.</div>
-  <div class="kids-eat-free-info">Best efforts are always made to ensure products marked as gluten free are kept as such. However as all food is prepared in the same kitchen we cannot guarantee cross contamination will not occur.</div>
-</div>
+  <div class="desserts-wrapper">
+    <div class="larkins-banner-title desserts">ALLERGIES INTOLERANCES</div>
+    <div class="kids-eat-free-info">If you have any allergies please inform a member of staff so we can help.</div>
+    <div class="kids-eat-free-info">Best efforts are always made to ensure products marked as gluten free are kept as such. However as all food is prepared in the same kitchen we cannot guarantee cross contamination will not occur.</div>
+  </div>
 </div>
 </div>
 </div>
 <div class="main-content-blocks menu-beer-content">
 <div class="lunch-menu-wrapper">
 <div class="lunch-full-menu-content-block">
-
-
-    <h2 class="sub-content-block-title sides">
-      On the side
-    </h2>
-
-
+  <h2 class="sub-content-block-title sides">
+    On the side
+  </h2>
   <%= raw @sides.content %>
   <div class="side-menu-title-wrapper">
     <h2 class="sub-content-block-title">
@@ -204,9 +204,8 @@
   </div>
   <%= raw @sharing_sides.content %>
 </div>
-
 <div class="lunch-full-menu-content-block">
-  <div class="coloured-block">
+  <div class="coloured-block  menu-item-container deal">
     <div class="beer-menu-title-wrapper">
       <h2 class="sub-content-block-title">
         Larkin's Sizzlers
